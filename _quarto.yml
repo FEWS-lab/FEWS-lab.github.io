@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "FEWS Lab - Test"
+  title: "FEWS Lab"
   favicon: "images/FEWS-logo.png"
   navbar:
     logo: "images/FEWS-logo.png"
