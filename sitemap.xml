@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://FEWS-lab.github.io/index.html</loc>
-    <lastmod>2026-08-18T19:09:59.297Z</lastmod>
+    <loc>https://FEWS-lab.github.io/kevin-bladon.html</loc>
+    <lastmod>2026-08-18T23:44:57.826Z</lastmod>
   </url>
   <url>
-    <loc>https://FEWS-lab.github.io/about.html</loc>
-    <lastmod>2026-08-18T19:09:59.264Z</lastmod>
+    <loc>https://FEWS-lab.github.io/research/index.html</loc>
+    <lastmod>2026-08-18T23:44:57.834Z</lastmod>
+  </url>
+  <url>
+    <loc>https://FEWS-lab.github.io/index.html</loc>
+    <lastmod>2026-08-18T23:44:57.826Z</lastmod>
   </url>
 </urlset>
