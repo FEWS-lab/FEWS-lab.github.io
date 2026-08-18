@@ -1,5 +1,5 @@
 ---
-title: "FEWS-lab.github.io"
+title: "Forest Ecohydrology and Watershed Science Lab"
 ---
 
 This is a Quarto website.
