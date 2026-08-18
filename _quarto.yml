@@ -4,19 +4,26 @@ project:
 
 website:
   title: "FEWS Lab"
+  favicon: "images/FEWS-logo.png"
   navbar:
-    left:
+    logo: "images/FEWS-logo.png"
+    right:
       - href: index.qmd
         text: Home
       - about.qmd
+  page-footer:
+      background: light # or `dark` or omit this option altogether (footer color will match page body color)
+      left: Copyright 2026, Kevin Bladon
+      right: This website is built with [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/FEWS-lab/FEWS-lab.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 format:
   html:
     theme:
-      - cosmo
-      - brand
-    css: styles.css
+      - styles.scss
     toc: true
+    grid:
+      body-width: 1100px
+
 
 editor: visual
 

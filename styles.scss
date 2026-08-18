@@ -1,0 +1,23 @@
+/*-- scss:defaults --*/
+
+// Colors
+$dark-blue: #1a6f96;
+$light-blue: #67c4db;
+$white: #FDFBF7;
+$gray: #e6e6e6;
+$mid-blue: #1d7097;
+$black: #000000;
+
+// Base document colors
+$navbar-bg: $gray; // navbar
+$navbar-fg: $dark-blue; // navbar foreground elements
+$navbar-hl: $mid-blue; // highlight color when hovering over navbar links
+$body-bg: $white; // page background 
+$body-color: $black; // page text 
+$footer-bg: $gray; // footer 
+$link-color: $dark-blue; // hyperlinks 
+$footer-fg: $dark-blue;
+
+// Inline code
+$code-bg: $white; // inline code background color
+$code-color: $black; // inline code text color
