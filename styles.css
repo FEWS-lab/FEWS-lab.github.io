@@ -1,9 +1,0 @@
-/* css styles */
-.no-row-lines table,
-.no-row-lines table thead,
-.no-row-lines table tbody,
-.no-row-lines table tr,
-.no-row-lines table th,
-.no-row-lines table td {
-  border: none !important;
-}

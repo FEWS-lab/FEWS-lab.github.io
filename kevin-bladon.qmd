@@ -5,22 +5,52 @@ title: "Dr. Kevin Bladon"
 ## Who I Am
 
 ::::: columns
+
 ::: {.column width="40%"}
 ![](images/Bladon_2018.jpg){fig-alt="photo of Kevin Bladon" fig-align="center" width="262"}
 :::
 
 ::: {.column width="60%"}
+
 I joined Oregon State University in 2014 working on issues related to land use and natural disturbance impacts on hydrology, water quality, and aquatic ecosystem health at the hillslope, stream reach, and small catchment scale.
 
 My goals are to: build effective collaborations across Oregon, North America, and internationally; train the next generation of research leaders; provide an atmosphere of respect and learning; engage the public and stakeholders, and; develop leading edge, novel research to solve applied problems.
+
+<br>
+
+<div class="profile-links">
+
+<a href="mailto:kevin.bladon@oregonstate.edu" class="profile-link">
+  {{< fa envelope >}}
+  <span>Email</span>
+</a>
+
+<a href="https://twitter.com/H2OScientist" class="profile-link">
+  {{< fa brands twitter >}}
+  <span>Twitter</span>
+</a>
+
+<a href="https://scholar.google.com/citations?user=w3daILIAAAAJ&hl=en&oi=ao" class="profile-link">
+  {{< ai google-scholar >}}
+  <span>Google Scholar</span>
+</a>
+
+<a href="https://www.researchgate.net/profile/Kevin_Bladon" class="profile-link">
+  {{< fa graduation-cap >}}
+  <span>ResearchGate</span>
+</a>
+
+</div>
+
 :::
+
+:::::
 
 ## Education and Work History
 
-::: {.no-row-lines}
-
+::: no-row-lines
 |  |  |
-|------------------|------------------------------------------------------|
+|-------------------|-----------------------------------------------------|
 | **2024 - Present** | Professor - Forest Hydrology and Watershed Science (Oregon State University, Corvallis, OR) |
 | **2023 - Present** | Department Head - Department of Forest Ecosystems and Society (Oregon State University, Corvallis, OR) |
 | **2021 - 2023** | Associate Department Head - Department of Forest Engineering, Resources, and Management (Oregon State University, Corvallis, OR) |
@@ -32,8 +62,7 @@ My goals are to: build effective collaborations across Oregon, North America, an
 | **2006 - 2008** | Post-Doctoral Fellow - Ecohydrology (University of Alberta, Edmonton, AB) |
 | **2006 - 2006** | Natural Resources Management Consultant - Forest Hydrology Specialist (Edmonton, AB). |
 | **2002 - 2006** | PhD Forest Hydrology / Ecohydrology (University of Alberta, Edmonton, AB). |
-| **1999 - 2002** | BSc Environmental and Conservation Sciences (University of Alberta, Edmonton, AB). | 
-
+| **1999 - 2002** | BSc Environmental and Conservation Sciences (University of Alberta, Edmonton, AB). |
 :::
 
 ## Teaching
@@ -55,4 +84,4 @@ My goals are to: build effective collaborations across Oregon, North America, an
 **NRSC 1220** - Dendrology 2 (TRU)
 
 **RENR 350** - Physical Hydrology (U of A)
-:::::
+

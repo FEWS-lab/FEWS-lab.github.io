@@ -40,9 +40,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-654c8363205770b0f6c202eba71f568b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b971b2b56eaf3dae98cf64248e71ab0c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -99,8 +101,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link active" href="./kevin-bladon.html" aria-current="page"> 
 <span class="menu-text">Dr.&nbsp;Kevin Bladon</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./research/index.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -119,6 +125,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#who-i-am" id="toc-who-i-am" class="nav-link active" data-scroll-target="#who-i-am">Who I Am</a></li>
+  <li><a href="#education-and-work-history" id="toc-education-and-work-history" class="nav-link" data-scroll-target="#education-and-work-history">Education and Work History</a></li>
+  <li><a href="#teaching" id="toc-teaching" class="nav-link" data-scroll-target="#teaching">Teaching</a></li>
   </ul>
 </nav>
     </div>
@@ -156,13 +164,23 @@ ul.task-list li input[type="checkbox"] {
 </div><div class="column" style="width:60%;">
 <p>I joined Oregon State University in 2014 working on issues related to land use and natural disturbance impacts on hydrology, water quality, and aquatic ecosystem health at the hillslope, stream reach, and small catchment scale.</p>
 <p>My goals are to: build effective collaborations across Oregon, North America, and internationally; train the next generation of research leaders; provide an atmosphere of respect and learning; engage the public and stakeholders, and; develop leading edge, novel research to solve applied problems.</p>
-</div><section id="education-and-work-history" class="level2">
+<p><br></p>
+<div class="profile-links">
+<p><a href="mailto:kevin.bladon@oregonstate.edu" class="profile-link"> <i class="fa-solid fa-envelope" aria-label="envelope"></i> <span>Email</span> </a></p>
+<p><a href="https://twitter.com/H2OScientist" class="profile-link"> <i class="fa-brands fa-twitter" aria-label="twitter"></i> <span>Twitter</span> </a></p>
+<p><a href="https://scholar.google.com/citations?user=w3daILIAAAAJ&amp;hl=en&amp;oi=ao" class="profile-link"> <i class="ai  ai-google-scholar" aria-label="google-scholar"></i> <span>Google Scholar</span> </a></p>
+<p><a href="https://www.researchgate.net/profile/Kevin_Bladon" class="profile-link"> <i class="fa-solid fa-graduation-cap" aria-label="graduation-cap"></i> <span>ResearchGate</span> </a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="education-and-work-history" class="level2">
 <h2 class="anchored" data-anchor-id="education-and-work-history">Education and Work History</h2>
 <div class="no-row-lines">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 75%">
+<col style="width: 26%">
+<col style="width: 73%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -216,7 +234,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </div>
-</section><section id="teaching" class="level2">
+</section>
+<section id="teaching" class="level2">
 <h2 class="anchored" data-anchor-id="teaching">Teaching</h2>
 <p><strong>FE 434</strong> - Forest Watershed Management (OSU)</p>
 <p><strong>FE 436/FE 536</strong> - Forest Disturbance Hydrology (OSU)</p>
@@ -227,8 +246,6 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>NRSC 1120</strong> -Dendrology 1 (TRU)</p>
 <p><strong>NRSC 1220</strong> - Dendrology 2 (TRU)</p>
 <p><strong>RENR 350</strong> - Physical Hydrology (U of A)</p>
-</section>
-</div>
 
 
 </section>
@@ -306,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/FEWS-lab\.github\.io\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -637,7 +654,7 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Copyright 2026, Kevin Bladon</p>
+<p><span class="footer-copyright">Copyright 2026, Kevin Bladon</span> · <a href="mailto:kevin.bladon@oregonstate.edu"><i class="fa-solid fa-envelope fa-2xl" aria-label="envelope"></i></a> · <a href="https://twitter.com/H2OScientist"><i class="fa-brands fa-twitter fa-2xl" aria-label="twitter"></i></a> · <a href="https://scholar.google.com/citations?user=w3daILIAAAAJ&amp;hl=en&amp;oi=ao"><i class="ai  ai-google-scholar ai-2xl" aria-label="google-scholar"></i></a> · <a href="https://www.researchgate.net/profile/Kevin_Bladon"><i class="fa-solid fa-graduation-cap fa-2xl" aria-label="graduation-cap"></i></a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

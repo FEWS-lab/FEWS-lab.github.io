@@ -10,10 +10,17 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - kevin-bladon.qmd
+      - research/index.qmd
   page-footer:
       background: light # or `dark` or omit this option altogether (footer color will match page body color)
-      left: Copyright 2026, Kevin Bladon
+      left: | 
+        <span class="footer-copyright">Copyright 2026, Kevin Bladon</span>      · 
+        [{{< fa envelope size=2xl >}}](mailto:kevin.bladon@oregonstate.edu)  · 
+        [{{< fa brands twitter size=2xl >}}](https://twitter.com/H2OScientist)  · 
+        [{{< ai google-scholar size=2xl >}}](https://scholar.google.com/citations?user=w3daILIAAAAJ&hl=en&oi=ao)  · 
+        [{{< fa graduation-cap size=2xl >}}](https://www.researchgate.net/profile/Kevin_Bladon)
+        
       right: This website is built with [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/FEWS-lab/FEWS-lab.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 format:
@@ -27,5 +34,5 @@ format:
 execute:
   freeze: auto
   
-editor: visual
+editor: source
 

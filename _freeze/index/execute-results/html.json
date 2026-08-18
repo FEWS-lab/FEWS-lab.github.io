@@ -1,0 +1,17 @@
+{
+  "hash": "efdd77dacebe8768ead728fab515837c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Forest Ecohydrology and Watershed Science Lab\"\ntoc: false\nfilters:\n  - carousel\n---\n\n:::: {.carousel}\n\n:::: {.carousel-item image=\"images/main-page-pics/slide-10.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-11.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-12.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-13.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-14.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-15.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-17.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-18.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-19.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-2.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-3.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-4.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-6.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-7.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-8.jpg\"}\n:::\n:::: {.carousel-item image=\"images/main-page-pics/slide-9.jpg\"}\n:::\n\n\n:::\n\n<br>\n\nThe [Forest Ecohydrology and Watershed Science Lab](https://fews.forestry.oregonstate.edu/lab.html), led by [Dr. Kevin Bladon](kevin-bladon.qmd), conducts field, laboratory, and modeling research on the impacts of natural disturbance (e.g., wildfire, pest outbreaks) and land use (e.g., forest harvesting) on forest hydrology, water quality, and aquatic ecosystem health at the hillslope, stream reach, and small catchment scale. Investigations also include regional and state (provincial) scale analyses of spatial and temporal trends in water quantity and quality as related to land use and climate change. Our research often involves trans-disciplinary research teams – including hydrologists, ecologists, soil scientists, wildfire scientists, drinking water treatment engineers, natural resource economists, and others – to integrate highly diverse issues related to sustainable, integrated source water management strategies and the safeguarding of river health and water supplies.\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

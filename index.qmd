@@ -1,21 +1,27 @@
 ---
 title: "Forest Ecohydrology and Watershed Science Lab"
-image: images/stream-photo-square.jpg
 toc: false
-about: 
-  template: broadside
-  links:
-    - icon: envelope
-      text: Email
-      href: mailto:kevin.bladon@oregonstate.edu
-    - icon: twitter 
-      text: Twitter 
-      href: https://twitter.com/H2OScientist 
-    - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com/citations?user=w3daILIAAAAJ&hl=en&oi=ao 
-    - icon: mortarboard-fill
-      text: Research Gate 
-      href: https://www.researchgate.net/profile/Kevin_Bladon
+filters:
+  - carousel
 ---
 
-The [Forest Ecohydrology and Watershed Science Lab](https://fews.forestry.oregonstate.edu/lab.html), led by [Dr. Kevin Bladon](https://fews.forestry.oregonstate.edu/kevinbladon.html), conducts field, laboratory, and modeling research on the impacts of natural disturbance (e.g., wildfire, pest outbreaks) and land use (e.g., forest harvesting) on forest hydrology, water quality, and aquatic ecosystem health at the hillslope, stream reach, and small catchment scale. Investigations also include regional and state (provincial) scale analyses of spatial and temporal trends in water quantity and quality as related to land use and climate change. Our research often involves trans-disciplinary research teams – including hydrologists, ecologists, soil scientists, wildfire scientists, drinking water treatment engineers, natural resource economists, and others – to integrate highly diverse issues related to sustainable, integrated source water management strategies and the safeguarding of river health and water supplies.
+:::: {.carousel}
+
+```{r}
+#| output: asis
+#| echo: false
+photos <- list.files("images/main-page-pics")
+
+for(x in photos){
+  cat(paste0(':::: {.carousel-item image="images/main-page-pics/',
+         x,
+         '"}', "\n", ":::", "\n"))
+}
+```
+
+
+:::
+
+<br>
+
+The [Forest Ecohydrology and Watershed Science Lab](https://fews.forestry.oregonstate.edu/lab.html), led by [Dr. Kevin Bladon](kevin-bladon.qmd), conducts field, laboratory, and modeling research on the impacts of natural disturbance (e.g., wildfire, pest outbreaks) and land use (e.g., forest harvesting) on forest hydrology, water quality, and aquatic ecosystem health at the hillslope, stream reach, and small catchment scale. Investigations also include regional and state (provincial) scale analyses of spatial and temporal trends in water quantity and quality as related to land use and climate change. Our research often involves trans-disciplinary research teams – including hydrologists, ecologists, soil scientists, wildfire scientists, drinking water treatment engineers, natural resource economists, and others – to integrate highly diverse issues related to sustainable, integrated source water management strategies and the safeguarding of river health and water supplies.
