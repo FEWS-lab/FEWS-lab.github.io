@@ -21,36 +21,6 @@
   
   people <- read.csv("publications/people_info.csv") %>% filter(!is.na(openalex_id))
   
-  #function to get works from every person on the list
-  get_fews_works <- function(id, start, end){
-    if(!is.na(start)){start <- as.Date(paste0(start, "-01-01"))}
-    if(!is.na(end)){end <- as.Date(paste0(end, "-12-31")) + years(1)}
-    
-    #get works from starting at lab to 1 year after
-    if(is.na(start) & is.na(end)){
-      works <- oa_fetch(entity = "works", author.id = id) 
-    }else if(is.na(end)){
-      works <- oa_fetch(entity = "works", author.id = id,
-                        from_publication_date = start) 
-    }else{
-      works <- oa_fetch(entity = "works", author.id = id,
-                        from_publication_date = start,
-                        to_publication_date = end) 
-    }
-    
-    
-    if(is.null(works)){
-      return(NULL)
-    }
-    
-    works <- works %>% 
-      select(any_of(c("id", "title", "doi", "publication_year", "type", "authorships", "keywords", "abstract"))) %>% 
-      tidy_output() 
-    
-    #return to bind together 
-    return(works)
-  }
-  
   #condenses authors and keywords, filters duplicated pre-prints
   tidy_output <- function(works){
     works$first_auth_id <- sapply(1:nrow(works), function(x){
@@ -91,29 +61,21 @@
     return(works)
   }
   
-  # #get missing abstracts 
-  # get_abstract <- function(doi){
-  #   browser()
-  #   abs <- tryCatch({cr_abstract(gsub("https://doi.org/", "", doi))},
-  #                   error = function(e){return(NA)})
-  #   abs_clean <- gsub("^Abstract |^abstract: ", "", abs, ignore.case = TRUE)
-  #   return(abs_clean)
-  # }
-  
-#get publications for each person 
-  all_works <- pblapply(1:nrow(people), function(x){
-    get_fews_works(people$openalex_id[x], start=people$start[x], end=people$end[x])
-  })
-  
-  works <- all_works %>% bind_rows() %>% distinct()
-#
+ 
+#get publications kevin is associated with (kevin should be on any fews lab associated things) 
+  works <- oa_fetch(entity = "works", author.id = "a5028722255;a5129069706")
+  works_clean <- works %>% 
+    select(any_of(c("id", "title", "doi", "publication_year", "type", "authorships", "keywords", "abstract", "source_display_name"))) %>% 
+    tidy_output() 
+
 #add columns to add manually 
   #check if first author on people list, then likely a primary
-  works$primary <- sapply(works$first_auth_id, function(x){
+  works_clean$primary <- sapply(works_clean$first_auth_id, function(x){
     any(grepl(x, people$openalex_id, ignore.case = TRUE))
   }) 
   
-  works_clean <- works %>% mutate(materials="", preprint="", filename="", include=TRUE) %>% 
+  works_clean <- works_clean %>% mutate(primary = ifelse(is.na(primary), FALSE, primary), 
+                                  materials="", preprint="", filename="", include=TRUE) %>% 
     arrange(type, desc(publication_year))
   
 #try to fill in missing abstracts 
@@ -124,12 +86,21 @@
   #   works_clean$abstract[x] <- get_abstract(works_clean$doi[x])
   # }
   
-#write to csv to allow editing 
-  write_excel_csv(works_clean, "publications/semiauto_bib.csv")
+#write to csv to allow editing, but only add new things, don't overwrite the info already in there 
+  if(file.exists("publications/semiauto_bib.csv")){
+    old <- read.csv("publications/semiauto_bib.csv")
+    new <- works_clean %>% filter(!(id %in% old$id)) 
+    
+    works_clean <- old %>% bind_rows(new) %>% arrange(type, desc(publication_year))
+    write_excel_csv(works_clean, "publications/semiauto_bib.csv")
+    
+  }else{
+    write_excel_csv(works_clean, "publications/semiauto_bib-edit.csv")
+  }
   
-#after filtering get reselected bib 
-  filtered_works <- oa_fetch(entity = "works", identifier = works$id)
-
+#after editing, convert to BibTex format 
+  #probably want to write code manually for this...
+  
 #convert the data frame to BibTeX format
  suppressMessages(bib <- GetBibEntryWithDOI(
     filtered_works$doi,
