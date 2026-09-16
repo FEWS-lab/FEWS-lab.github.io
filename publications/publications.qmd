@@ -1,5 +1,5 @@
 ---
-pagetitle: "Publications"
+title: "Publications"
 toc: false
 bibliography: publications.bib
 csl: apa.csl
