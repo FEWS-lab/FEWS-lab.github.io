@@ -128,20 +128,13 @@ library(dplyr)
     data.frame(name = x$data$name, id = x$id)
   })%>% bind_rows()
 
-#get items in group
-# bib <- request(
-#   paste0("http://localhost:23119/api/groups/", group_ids$id[group_ids$name == "FEWS-publications"], "/items")) %>%
-#   req_url_query(format = "bibtex") %>%
-#   req_perform() %>%
-#   resp_body_string()
-
-bib <- request(
+bib_list <- request(
   paste0("http://localhost:23119/api/groups/", group_ids$id[group_ids$name == "FEWS-publications"], "/items")) %>%
   req_url_query(itemType = "journalArticle") %>% #get just articles not the pubs too
   req_perform() %>%
   resp_body_json() 
 
-bib_text <- request(
+bib <- request(
   paste0("http://localhost:23119/api/groups/", group_ids$id[group_ids$name == "FEWS-publications"], "/items")) %>%
   req_url_query(itemType = "journalArticle", format="bibtex") %>% #get just articles not the pubs too
   req_perform() %>%
@@ -161,7 +154,7 @@ bib_text <- request(
     tags <- vapply(data$tags, `[[`, character(1), "tag")
     
     out <- list(
-      key = entry$key,
+      key = data$citationKey,
       title = data$title,
       authors = data$creators,
       date = data$date,
@@ -191,44 +184,27 @@ bib_text <- request(
     out
   }
   
-#add extra info to bib 
-  zotero_to_bib <- function(x, file = tempfile(fileext = ".json")) {
-    
-    jsonlite::write_json(
-      x,
-      file,
-      auto_unbox = TRUE,
-      pretty = TRUE
-    )
-    
-    bibfile <- tempfile(fileext = ".bib")
-    
-    system2(
-      "pandoc",
-      c(
-        "-f", "csljson",
-        "-t", "bibtex",
-        file,
-        "-o", bibfile
-      )
-    )
-    
-    readLines(bibfile, warn = FALSE)
-  }  
-
-  #apply extra info (pull just the things we want)
-  bib_extra <- lapply(bib, pull_fields)
+#apply extra info (pull just the things we want)
+  bib_extra <- lapply(bib_list, pull_fields)
 
 #copy pdf to website repo folder 
   dir.create("publications/articles", showWarnings = FALSE)
-  paths <- sapply(bib_extra, function(x){x$data$article})
+  paths <- lapply(bib_list, function(entry){
+    if(!is.null(entry$links$attachment)){ 
+      id <- basename(entry$links$attachment$href) 
+      article <- list.files(file.path(zotero_library(), id), pattern = ".pdf", full.names = TRUE) 
+    }else{article <- NA_character_}
+    key <- entry$data$citationKey
+    data.frame(key = key, path=article)
+    }) %>% bind_rows()
   
-  file.copy(paths, file.path("publications/articles", basename(paths)))
+  file.copy(paths$path, file.path("publications/articles", paste0(paths$key, ".", tools::file_ext(paths$path))), overwrite = TRUE)
 
+  
 #save as yaml to read via quarto code
   yaml::write_yaml(bib_extra, "publications/publications.yml")
   
 #write bibtext file
-  write.table(bib_text, "publications/publications.bib", row.names=FALSE, col.names = FALSE, quote = FALSE)
+  write.table(bib, "publications/publications.bib", row.names=FALSE, col.names = FALSE, quote = FALSE)
 
 #write bibtext file
