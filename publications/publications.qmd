@@ -1,6 +1,6 @@
 ---
 title: "Publications"
-toc: false
+toc: true
 bibliography: publications.bib
 csl: apa.csl
 nocite: |
@@ -44,7 +44,9 @@ strip_braces <- function(x) {
 
 fmt_authors_card <- function(entry) {
   au <- entry$author
+  if (is.null(au) || length(au) == 0) au <- entry$editor
   if (is.null(au) || length(au) == 0) return(NA_character_)
+
   fmt_one <- function(a) {
     fam_vec <- a$family
     if (length(fam_vec)) paste(as.character(fam_vec), collapse = " ") else ""
@@ -78,7 +80,7 @@ normalize_link <- function(x) {
   y <- as.character(x)
   y[is.na(y)] <- NA_character_
   y <- trimws(y)
-
+  
   y <- gsub("\\\\_", "_", y)
   
   y[y == "" | tolower(y) == "na"] <- NA_character_
@@ -137,7 +139,9 @@ get_date <- function(entry){
       doi = data$DOI,
       abstract = data$abstractNote,
       url = data$url,
-      primary = any(grepl("^primary$", tags, ignore.case = TRUE))
+      primary = any(grepl("^primary$", tags, ignore.case = TRUE)),
+      inreview =  any(grepl("^in-review$", tags, ignore.case = TRUE)),
+      informal =  any(grepl("^informal$", tags, ignore.case = TRUE))
     )
     
     if("extra" %in% names(data)){
@@ -155,6 +159,76 @@ get_date <- function(entry){
     
     out
   }
+  
+#code to build html for cards
+build_card <- function(
+  key, entry, has_preprint_key, has_materials_key,
+  title, authors_card, year, venue,
+  abstract, bibtex,
+  preprint_url = NA_character_, materials_url = NA_character_,
+  article_url = NA_character_,
+  doi_url = NA_character_, primary = FALSE, 
+  inreview = FALSE, ...
+) {
+  payloads <- tags$div(
+    style = "display:none;",
+    tags$div(class = "payload-abstract", abstract %||% ""),
+    tags$div(class = "payload-bibtex",  bibtex   %||% "")
+  )
+
+  ttl_node <- if (isTRUE(nzchar(doi_url %||% "")) & !inreview) {
+    tags$div(class = "pub-title", tags$a(title, href = doi_url, target = "_blank", rel = "noopener"))
+  } else {
+    tags$div(class = "pub-title", title)
+  }
+
+  meta <- tags$div(
+    class = "pub-meta",
+    if (nzchar(authors_card %||% "")) {
+      tagList(HTML(authors_card), tags$br())
+    } else {
+      NULL
+    },
+    tagList(if (nzchar(venue %||% "")) tags$em(venue) else NULL)
+  )
+
+  actions <- tags$div(
+    class = "pub-actions",
+    # Standalone star badge (only if primary)
+    if (isTRUE(primary)) tags$span(
+      class = "lab-star",
+      role  = "img",
+      title = "This project was led by the FEWS lab",
+      `aria-label` = "This project was led by the FEWS lab",
+      "★",
+      tags$span(class = "sr-only", " This project was led by the FEWS lab")
+    ),
+    # Action links
+    if (!is.na(abstract))
+      tags$a("Abstract", href = "#", `data-action`="abstract", role="button"),
+    if (!inreview | (inreview & has_preprint_key))
+    tags$a("Citation", href = "#", `data-action`="citation", role="button"),
+    if (!inreview| (inreview & has_preprint_key))
+    tags$a("BibTeX",   href = "#", `data-action`="bib",      role="button"),
+    if (isTRUE(nzchar(article_url %||% "")) & !is.na(article_url))
+    tags$a("Article", class = "external", href = article_url, target = "_blank", rel="noopener"),
+    if (isTRUE(has_preprint_key))
+      tags$a("Preprint", class = "external", href = (preprint_url %||% "#"), target = "_blank", rel="noopener"),
+    if (isTRUE(has_materials_key))
+      tags$a("Materials", class = "external", href = (materials_url %||% "#"), target = "_blank", rel="noopener")
+  )
+
+  toggle_panel <- tags$div(
+    class = "toggle-area",
+    `data-current` = "",
+    tags$button(class = "copy-btn", "Copy"),
+    tags$span(class = "copy-toast", "Copied!"),
+    tags$div(class = "panel-label", "—"),
+    tags$div(class = "content")
+  )
+
+  tags$div(class = "pub-card", `data-key` = key, ttl_node, meta, actions, toggle_panel, payloads)
+}
 
 ```
 
@@ -172,13 +246,13 @@ get_date <- function(entry){
 
 bib_list <- request(
   paste0("http://localhost:23119/api/groups/", group_ids$id[group_ids$name == "FEWS-publications"], "/items")) %>%
-  req_url_query(itemType = "journalArticle") %>% #get just articles not the pubs too
+  req_url_query(itemType = "journalArticle||book") %>% #get just articles not the pubs too
   req_perform() %>%
   resp_body_json() 
 
 bib <- request(
   paste0("http://localhost:23119/api/groups/", group_ids$id[group_ids$name == "FEWS-publications"], "/items")) %>%
-  req_url_query(itemType = "journalArticle", format="bibtex") %>% #get just articles not the pubs too
+  req_url_query(itemType = "journalArticle||book", format="bibtex") %>% #get just articles not the pubs too
   req_perform() %>%
   resp_body_string()  
 
@@ -246,7 +320,11 @@ rows <- tibble(
     materials_raw = sapply(bib_extra, function(x){x$materials %||% NA_character_}),
 
     has_preprint_key  = !is.na(preprint_raw),
-    has_materials_key = !is.na(materials_raw)
+    has_materials_key = !is.na(materials_raw),
+    
+    primary = sapply(bib_extra, `[[`, "primary"),
+    inreview = sapply(bib_extra, `[[`, "inreview"),
+    informal = sapply(bib_extra, `[[`, "informal")
   ) |>
   left_join(extra_links, by = "key") |>
   mutate(
@@ -257,25 +335,24 @@ rows <- tibble(
   mutate(
     preprint_url  = normalize_link(preprint_val),
     materials_url = normalize_link(materials_val), 
-    article_url = paste0("articles/", key, ".pdf")
+    article_url = ifelse(inreview, NA_character_, paste0("articles/", key, ".pdf"))
   ) |>
   mutate(
-    doi_url = normalize_link(
-      if_else(
-        nzchar(doi %||% ""),
-        str_glue("https://doi.org/{doi}"),
-        if_else(nzchar(preprint_url %||% ""), preprint_url, url_fallback)
-      )
-    )
+    doi_url = ifelse(is.na(doi), url_fallback, paste0("https://doi.org/", doi))
   ) |>
-  mutate(
-    primary = sapply(bib_extra, `[[`, "primary")
-  ) |>
-  arrange(desc(year), title)
+  arrange(desc(inreview), desc(year), title)
 
 ```
 
 ```{css}
+
+h2 {
+  margin-bottom: 0rem;
+}
+
+#quarto-bibliography {
+  display: none;
+}
 /* Group header */
 .year-group { margin: 28px 0 8px; }
 .year-title { margin: 0; font-size: 1.35rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 2px; }
@@ -456,88 +533,92 @@ rows <- tibble(
 </script>
 ```
 
+## Peer-Reviewed Publications
+
 ```{r}
-#| label: render-publications
+#| label: render-publications-submit
 
-build_card <- function(
-  key, entry, has_preprint_key, has_materials_key,
-  title, authors_card, year, venue,
-  abstract, bibtex,
-  preprint_url = NA_character_, materials_url = NA_character_,
-  article_url = NA_character_,
-  doi_url = NA_character_, primary = FALSE, ...
-) {
-  payloads <- tags$div(
-    style = "display:none;",
-    tags$div(class = "payload-abstract", abstract %||% ""),
-    tags$div(class = "payload-bibtex",  bibtex   %||% "")
-  )
-
-  ttl_node <- if (isTRUE(nzchar(doi_url %||% ""))) {
-    tags$div(class = "pub-title", tags$a(title, href = doi_url, target = "_blank", rel = "noopener"))
-  } else {
-    tags$div(class = "pub-title", title)
-  }
-
-  meta <- tags$div(
-    class = "pub-meta",
-    if (nzchar(authors_card %||% "")) {
-      tagList(HTML(authors_card), tags$br())
-    } else {
-      NULL
-    },
-    tagList(if (nzchar(venue %||% "")) tags$em(venue) else NULL)
-  )
-
-  actions <- tags$div(
-    class = "pub-actions",
-    # Standalone star badge (only if primary)
-    if (isTRUE(primary)) tags$span(
-      class = "lab-star",
-      role  = "img",
-      title = "This project was led by the FEWS lab",
-      `aria-label` = "This project was led by the FEWS lab",
-      "★",
-      tags$span(class = "sr-only", " This project was led by the FEWS lab")
-    ),
-    # Action links
-    tags$a("Abstract", href = "#", `data-action`="abstract", role="button"),
-    tags$a("Citation", href = "#", `data-action`="citation", role="button"),
-    tags$a("BibTeX",   href = "#", `data-action`="bib",      role="button"),
-    if (isTRUE(nzchar(article_url %||% "")))
-    tags$a("Article", class = "external", href = article_url, target = "_blank", rel="noopener"),
-    if (isTRUE(has_preprint_key))
-      tags$a("Preprint", class = "external", href = (preprint_url %||% "#"), target = "_blank", rel="noopener"),
-    if (isTRUE(has_materials_key))
-      tags$a("Materials", class = "external", href = (materials_url %||% "#"), target = "_blank", rel="noopener")
-  )
-
-  toggle_panel <- tags$div(
-    class = "toggle-area",
-    `data-current` = "",
-    tags$button(class = "copy-btn", "Copy"),
-    tags$span(class = "copy-toast", "Copied!"),
-    tags$div(class = "panel-label", "—"),
-    tags$div(class = "content")
-  )
-
-  tags$div(class = "pub-card", `data-key` = key, ttl_node, meta, actions, toggle_panel, payloads)
-}
-
-years <- rows |>
-  distinct(year) |>
-  arrange(desc(year)) |>
-  pull(year)
+years <- "In Review"
 
 groups <- lapply(years, function(y) {
-  subset <- rows |> filter(year == y)
+  subset <- rows |> filter(inreview & !informal)
   subset_min <- subset |>
     select(
       key, entry, has_preprint_key, has_materials_key, title, 
       authors_card, year, venue,
       abstract, bibtex, 
       preprint_url, materials_url, 
-      article_url, doi_url, primary
+      article_url, doi_url, primary,
+      inreview
+    )
+  cards <- pmap(subset_min, build_card)
+
+  tags$div(
+    class = "year-group",
+    tags$h2(class = "year-title anchored", id = paste0("y-", y), str_to_title(y)),
+    tags$div(cards)
+  )
+})
+
+browsable(tags$div(
+  groups
+))
+```
+
+
+```{r}
+#| label: render-publications-peer
+
+years <- rows |> filter(!inreview) |>
+  distinct(year) |>
+  arrange(desc(year)) |>
+  pull(year)
+
+groups <- lapply(years, function(y) {
+  subset <- rows |> filter(year == y & !inreview & !informal)
+  subset_min <- subset |>
+    select(
+      key, entry, has_preprint_key, has_materials_key, title, 
+      authors_card, year, venue,
+      abstract, bibtex, 
+      preprint_url, materials_url, 
+      article_url, doi_url, primary,
+      inreview
+    )
+  cards <- pmap(subset_min, build_card)
+
+  tags$div(
+    class = "year-group",
+    tags$h2(class = "year-title anchored", id = paste0("y-", y), str_to_title(y)),
+    tags$div(cards)
+  )
+})
+
+browsable(tags$div(
+  groups
+))
+``` 
+
+## Refereed Technical and Extension Publications
+
+```{r}
+#| label: render-publications-informal
+
+years <- rows |> filter(!inreview & informal) |>
+  distinct(year) |>
+  arrange(desc(year)) |>
+  pull(year)
+
+groups <- lapply(years, function(y) {
+  subset <- rows |> filter(year == y & informal)
+  subset_min <- subset |>
+    select(
+      key, entry, has_preprint_key, has_materials_key, title, 
+      authors_card, year, venue,
+      abstract, bibtex, 
+      preprint_url, materials_url, 
+      article_url, doi_url, primary,
+      inreview
     )
   cards <- pmap(subset_min, build_card)
 
@@ -550,6 +631,7 @@ groups <- lapply(years, function(y) {
 
 browsable(tags$div(
   groups,
+  tags$hr(),
   tags$div(
     class = "code-attribution",
     "Publication card functionality adapted from ",
