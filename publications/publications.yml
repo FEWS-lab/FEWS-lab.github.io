@@ -1,0 +1,109 @@
+- key: 4CJBS2NR
+  title: Impacts of Tethered Logging Equipment on Soil Compaction, Moisture and Seedling
+    Growth
+  authors:
+  - firstName: Woodam
+    lastName: Chung
+    creatorType: author
+  - firstName: Ronald J.
+    lastName: Reuter
+    creatorType: author
+  - firstName: Brett A.
+    lastName: Morrissette
+    creatorType: author
+  - firstName: Ben A.
+    lastName: Leshchinsky
+    creatorType: author
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  - firstName: Jeffery A.
+    lastName: Hatten
+    creatorType: author
+  - firstName: Carlos A.
+    lastName: Gonzalez-Benecke
+    creatorType: author
+  date: '2026-04-01'
+  journal: Forest Science
+  volume: '72'
+  issue: '2'
+  pages: 279-304
+  doi: 10.1007/s44391-026-00057-9
+  abstract: Traditional hand-felling on steep slopes in the Pacific Northwest (USA)
+    minimizes soil disturbance but is labor intensive and hazardous. Tether-assist
+    machine harvest offers a safer alternative, yet its soil impacts are less understood.
+    This study compared soil impacts (bulk density (Db), sediment production, penetration
+    resistance) and soil resilience (volumetric water content (VWC), seedling growth)
+    between hand-felled and tethered machine-felled areas on > 30% slopes with Ultisol
+    soils (silty clay loams) in Southwest Oregon. Pre- and post-yarding soil measurements
+    were taken in both harvest areas, with tracked and untracked zones assessed for
+    resilience in the tethered system. Both methods showed a general decrease in near-surface
+    Db that persisted through to the post-yarding phase. A general increase in subsurface
+    penetration resistance occurred across treatments, with varying significance.
+    No sediment production was observed over two years. Tracked soils exhibited higher
+    VWC, especially during dry months with high vapor pressure deficit, and greater
+    Douglas-fir (Pseudotsuga menziesii (Mirb.) Franco) seedling biomass than untracked
+    soils. These results suggest, for the two-year observation period, that tether-assist
+    harvest on these soils does not more negatively impact soil compared to the current
+    steep slope harvest standard of hand-felling. The higher plant biomass and VWC
+    in tracked zones suggest machine traffic collapses macropores, increasing water
+    retention, which may allow for more plant available water during dry seasons.
+    This study contributes to the growing understanding of tethered versus traditional
+    harvesting on steep terrain and suggests that tethered machine-felling could be
+    a safer and viable alternative to hand-felling on steep (> 30% slopes) terrain
+    with Ultisol soils in dry conditions.
+  url: https://doi.org/10.1007/s44391-026-00057-9
+  primary: no
+- key: 4CHAUPHC
+  title: When Do Riverine Systems “Feel the Burn”? Simulating How Burn Extent and
+    Severity Modulate Hydrologic Controls on Biogeochemical Export
+  authors:
+  - firstName: K. A.
+    lastName: Wampler
+    creatorType: author
+  - firstName: A. N.
+    lastName: Myers-Pigg
+    creatorType: author
+  - firstName: H.
+    lastName: Kang
+    creatorType: author
+  - firstName: P.
+    lastName: Regier
+    creatorType: author
+  - firstName: T. D.
+    lastName: Scheibe
+    creatorType: author
+  - firstName: K. D.
+    lastName: Bladon
+    creatorType: author
+  date: '2026'
+  journal: Water Resources Research
+  volume: '62'
+  issue: '2'
+  pages: e2025WR040678
+  doi: 10.1029/2025WR040678
+  abstract: 'Wildfires impact terrestrial landscapes and downstream river corridors
+    through shifts in vegetation and soil properties leading to downstream hydrologic
+    and water quality impacts. The magnitude of these impacts depend on a complex
+    and interconnected set of wildfire, landscape, and aquatic processes. Here, we
+    isolate the impact of post-fire hydrologic changes on streamflow, nitrate, and
+    dissolved organic carbon using the Soil and Water Assessment Tool (SWAT) model.
+    We explore how responses differ across burn severity and area burned in two test
+    basins: a humid forested basin and a semi-arid mixed land use basin. We ran 1830
+    wildfire simulations testing impacts of area burned, burn severity, and post-fire
+    precipitation on streamflow, nitrate, and dissolved organic carbon. Our work suggests
+    that area burned thresholds differ with burn severity and analyte. Additionally,
+    post-fire transport of dissolved organic carbon was sensitive to both area burned
+    and severity, while nitrate was primarily sensitive to area burned. Despite a
+    muted (−9.5 to 5.7 mm yr−1 change) hydrologic response in the semi-arid basin,
+    the model predicted large (7%–288% increase) shifts in dissolved organic carbon,
+    suggesting that post-fire shifts in flow pathways and soil properties are key
+    in its response. The limited shifts in nitrate responses in the simulations highlight
+    that terrestrial post-fire transformations, rather than hydrologic changes, may
+    control the increases in stream nitrate often observed post-fire. As wildfire
+    regimes are shifting, improving understanding of post-fire nutrient export responses
+    is critical to protect freshwater resources and aquatic ecosystems.'
+  url: https://onlinelibrary.wiley.com/doi/abs/10.1029/2025WR040678
+  primary: yes
+  materials: https://doi.org/10.15485/2529445
+  preprint: https://doi.org/10.22541/essoar.174438106.63564767/v1

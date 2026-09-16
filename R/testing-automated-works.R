@@ -111,4 +111,124 @@
  WriteBib(bib, file="publications/publications_new.bib")
  
  
+#trying to just add to group library in zotero with custom tags so it's easier to manage 
+#need to install Better BibTeX for Zotero (https://retorque.re/zotero-better-bibtex/installation/) must be installed and zotero must be running 
+ #also need to The local API must be enabled in Zotero’s preferences (Settings → Advanced → “Allow other applications on this computer to communicate with Zotero”).
+
+library(httr2)
+library(jsonlite)
+library(dplyr)
+ 
+#get id for group 
+  user <- Sys.getenv("ZOTERO_USER_ID")
+  collections <- request(paste0("http://localhost:23119/api/users/", user, "/groups")) %>%
+    req_perform() %>%
+    resp_body_json()
+  group_ids <- lapply(collections, function(x){
+    data.frame(name = x$data$name, id = x$id)
+  })%>% bind_rows()
+
+#get items in group
+# bib <- request(
+#   paste0("http://localhost:23119/api/groups/", group_ids$id[group_ids$name == "FEWS-publications"], "/items")) %>%
+#   req_url_query(format = "bibtex") %>%
+#   req_perform() %>%
+#   resp_body_string()
+
+bib <- request(
+  paste0("http://localhost:23119/api/groups/", group_ids$id[group_ids$name == "FEWS-publications"], "/items")) %>%
+  req_url_query(itemType = "journalArticle") %>% #get just articles not the pubs too
+  req_perform() %>%
+  resp_body_json() 
+
+bib_text <- request(
+  paste0("http://localhost:23119/api/groups/", group_ids$id[group_ids$name == "FEWS-publications"], "/items")) %>%
+  req_url_query(itemType = "journalArticle", format="bibtex") %>% #get just articles not the pubs too
+  req_perform() %>%
+  resp_body_string() 
+
+#get only articles 
+
+#get library location
+  zotero_library <- function(){
+  return(paste0(fs::path_home(),"/Zotero/Storage"))
+}
+#alter bib to have custom fields for website
+  pull_fields <- function(entry){
+    
+    data <- entry$data
+    
+    tags <- vapply(data$tags, `[[`, character(1), "tag")
+    
+    out <- list(
+      key = entry$key,
+      title = data$title,
+      authors = data$creators,
+      date = data$date,
+      journal = data$publicationTitle,
+      volume = data$volume,
+      issue = data$issue,
+      pages = data$pages,
+      doi = data$DOI,
+      abstract = data$abstractNote,
+      url = data$url,
+      primary = any(grepl("^primary$", tags, ignore.case = TRUE))
+    )
+    
+    if("extra" %in% names(data)){
+      note <- strsplit(data$extra, "\n", fixed = TRUE)[[1]]
+      
+      materials <- grep("^Materials:", note, ignore.case = TRUE, value = TRUE)
+      preprint <- grep("^Preprint:", note, ignore.case = TRUE, value = TRUE)
+      
+      if(length(materials) > 0)
+        out$materials <- trimws(sub("^Materials:\\s*", "", materials[1], ignore.case = TRUE))
+      
+      if(length(preprint) > 0)
+        out$preprint <- trimws(sub("^Preprint:\\s*", "", preprint[1], ignore.case = TRUE))
+    }
+    
+    out
+  }
   
+#add extra info to bib 
+  zotero_to_bib <- function(x, file = tempfile(fileext = ".json")) {
+    
+    jsonlite::write_json(
+      x,
+      file,
+      auto_unbox = TRUE,
+      pretty = TRUE
+    )
+    
+    bibfile <- tempfile(fileext = ".bib")
+    
+    system2(
+      "pandoc",
+      c(
+        "-f", "csljson",
+        "-t", "bibtex",
+        file,
+        "-o", bibfile
+      )
+    )
+    
+    readLines(bibfile, warn = FALSE)
+  }  
+
+  #apply extra info (pull just the things we want)
+  bib_extra <- lapply(bib, pull_fields)
+
+#copy pdf to website repo folder 
+  dir.create("publications/articles", showWarnings = FALSE)
+  paths <- sapply(bib_extra, function(x){x$data$article})
+  
+  file.copy(paths, file.path("publications/articles", basename(paths)))
+
+#save as yaml to read via quarto code
+  yaml::write_yaml(bib_extra, "publications/publications.yml")
+  
+#write bibtext file
+  write.table(bib_text, "publications/publications.bib", row.names=FALSE, col.names = FALSE, quote = FALSE)
+
+#write bibtext file

@@ -9,25 +9,25 @@ execute:
   echo: false
   warning: false
   message: false
+  freeze: auto
 ---
 <!-- code modified from https://github.com/jmgirard/affcomlab/tree/main --> 
 
-```{=html}
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Publications</li>
-  </ol>
-</nav>
-```
+This page lists all papers published by **Dr. Kevin Bladon and the FEWS Lab**, organized by year of publication. 
 
-This page lists all papers published by Dr. Kevin Bladon, organized by year of publication. Click a paper’s *title* to visit the publisher page and access the official version. Use *Abstract* to reveal the summary, *Citation* for the APA 7th-edition reference, and *BibTeX* to view the BibTeX entry. Clicking the link a second time will close the display again. *Article* links to a free version of the publication, and *Materials* leads to an open repository with data, code, and other open-science resources. <span style="font-size:0.9rem; opacity:0.8; margin-bottom:0.5rem;">★ = Work led or co-led by our lab</span>
+- Click a paper’s *title* to visit the publisher page and access the official version. 
+- Use *Abstract* to reveal the summary, *Citation* for the APA 7th-edition reference, and *BibTeX* to view the BibTeX entry. 
+- *Article* links to a free version of the publication. 
+- *Materials* leads to a data package or open repository with data, code, and other open-science resources. 
+
+<span style="font-size:0.9rem; opacity:0.8; margin-bottom:0.5rem;">★ = Work led or co-led by our lab</span>
 
 
 ```{r setup}
 library(tidyverse)
 library(RefManageR)
 library(htmltools)
+library(yaml)
 
 `%||%` <- function(a, b) if (is.null(a) || length(a) == 0) b else a
 nz_chr <- function(x) ifelse(is.na(x) | trimws(x) == "", NA_character_, x)
@@ -99,64 +99,57 @@ normalize_link <- function(x) {
   y[needs_scheme] <- paste0("https://", y[needs_scheme])
 
   y
+} 
+
+get_date <- function(entry){
+  date <- entry$date 
+  if(nchar(date) > 4){
+    date <- year(as.Date(date))
+  }
+  
+  return(date)
 }
 ```
 
 ```{r}
 #| label: build-rows
 
-bib  <- ReadBib("publications_new.bib", check = FALSE)
-keys <- names(bib)
+bib  <- yaml::read_yaml("publications.yml")
+bibtext  <- ReadBib("publications.bib", check = TRUE)
+keys <- names(bibtext) 
 
-extra_links <- tibble(key = character(), preprint = character(), materials = character())
+#reorder the extra data so it's in the same order as bib  
 
-rows <- tibble(
-  key   = keys,
-  entry = lapply(keys, function(k) bib[k])
-) |>
+rows <- tibble(key = keys,
+               entry = lapply(keys, function(k) bibtext[k]),
+               title = sapply(bib, `[[`, "title"),
+               authors_card = map_chr(entry, fmt_authors_card),
+               year = sapply(bib, get_date),
+               venue = sapply(bib, function(x){x$journal %||% x$booktitle %||%x$publisher %||% ""}),
+               abstract = sapply(bib, function(x){x$abstract %||% ""}),
+               bibtex = map_chr(entry, get_bibtex),
+               doi = sapply(bib, function(x){x$doi %||% ""}),
+               url_fallback = sapply(bib, function(x){x$url %||% ""}),
+               preprint_raw  = sapply(bib, function(x){v <- x$preprint; if(is.null(v) || length(v)==0) NA_character_ else as.character(v)}),
+               materials_raw  = sapply(bib, function(x){v <- x$materials; if(is.null(v) || length(v)==0) NA_character_ else as.character(v)}),
+               has_preprint_key  = !is.na(preprint_raw),
+               has_materials_key = !is.na(materials_raw)
+              ) %>% 
   mutate(
-    title        = map_chr(entry, ~ strip_braces(.x$title %||% "")),
-    authors_card = map_chr(entry, fmt_authors_card),
-    year         = map_chr(entry, ~ {
-      y <- .x$year %||% .x$date %||% ""
-      if (is.list(y)) y$year %||% "" else as.character(y)
-    }),
-    venue        = map_chr(entry, ~ strip_braces(.x$journal %||% .x$booktitle %||% .x$publisher %||% "")),
-    abstract     = map_chr(entry, get_abstract),
-    bibtex       = map_chr(entry, get_bibtex),
-
-    doi          = map_chr(entry, ~ .x$doi %||% NA_character_),
-    url_fallback = map_chr(entry, ~ .x$url %||% NA_character_),
-
-    preprint_raw  = map_chr(entry, ~ { v <- .x$preprint;  if (is.null(v) || length(v)==0) NA_character_ else as.character(v[[1]]) }),
-    materials_raw = map_chr(entry, ~ { v <- .x$materials; if (is.null(v) || length(v)==0) NA_character_ else as.character(v[[1]]) }),
-
-    has_preprint_key  = map_lgl(entry, ~ !is.null(.x$preprint)  && length(.x$preprint)  > 0),
-    has_materials_key = map_lgl(entry, ~ !is.null(.x$materials) && length(.x$materials) > 0)
-  ) |>
-  left_join(extra_links, by = "key") |>
-  mutate(
-    preprint_val  = coalesce(preprint,  preprint_raw),
-    materials_val = coalesce(materials, materials_raw)
-  ) |>
-  select(-any_of(c("preprint", "materials"))) |>
-  mutate(
-    preprint_url  = normalize_link(preprint_val),
-    materials_url = normalize_link(materials_val)
-  ) |>
-  mutate(
+    preprint_url  = normalize_link(preprint_raw),
+    materials_url = normalize_link(materials_raw)) %>% 
+   mutate(
     doi_url = normalize_link(
       if_else(
         nzchar(doi %||% ""),
         str_glue("https://doi.org/{doi}"),
         if_else(nzchar(preprint_url %||% ""), preprint_url, url_fallback)
       )
-    )
-  ) |>
+    )) %>% 
   mutate(
-    primary = map_lgl(entry, ~ tolower(as.character(.x$primary %||% "false")) == "true")
-  ) |>
-  arrange(desc(year), title)
+    primary = tolower(as.character(sapply(bib, `[[`, "primary")))
+  ) %>% arrange(desc(year), title)
+
 ```
 
 ```{css}
