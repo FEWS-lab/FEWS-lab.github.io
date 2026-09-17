@@ -1,0 +1,198 @@
+---
+title: "Publications"
+toc: true
+bibliography: publications.bib
+csl: apa.csl
+format:
+  html:
+    css: pub-style.css
+    include-in-header:
+      - text: |
+          <script src="publications.js"></script>
+nocite: |
+  @*
+execute:
+  echo: false
+  warning: false
+  message: false
+  freeze: auto
+---
+<!-- code modified from https://github.com/jmgirard/affcomlab/tree/main --> 
+
+This page lists all papers published by **Dr. Kevin Bladon and the FEWS Lab**, organized by year of publication. 
+
+- Click a paper’s *title* to visit the publisher page and access the official version. 
+- Use *Abstract* to reveal the summary, *Citation* for the APA 7th-edition reference, and *BibTeX* to view the BibTeX entry. 
+- *Article* links to a free version of the publication. 
+- *Preprint* links to a pre-print that has not been peer-reviewed.
+- *Materials* leads to a data package or open repository with data, code, and other open-science resources. 
+
+<span style="font-size:0.9rem; opacity:0.8; margin-bottom:0.5rem;">★ = Work led or co-led by our lab</span>
+
+
+```{r setup}
+#loads packages and functions needed
+source("publication-utils.R")
+```
+
+```{r}
+#| label: create-bib 
+
+#get id for group 
+  user <- Sys.getenv("ZOTERO_USER_ID")
+  collection <- "FEWS-publications"
+  
+  bib_id <- collection_ids(user, collection)
+  
+  #check for what types to include
+  check <- zbib(bib_id, format = "json")
+  types <- unique(sapply(check, function(x){x$data$itemType})) 
+  types <- types[!types %in% c("attachment", "note")]
+  
+bib_list <- zbib(bib_id, format = "json", itemType = paste(types, collapse=" || "))
+bib <- zbib(bib_id, format = "bibtex", itemType = paste(types, collapse=" || "))
+
+#make sure that keys are unique 
+  keys <- sapply(bib_list, function(x){x$data$citationKey})
+  stopifnot(length(keys) == length(unique(keys)))
+  
+#apply extra info (pull just the things we want)
+  bib_extra <- lapply(bib_list, pull_fields)
+
+#copy pdf to website repo folder 
+ move_pdfs(bib_list)
+  
+#save as yaml to read via quarto code
+  yaml::write_yaml(bib_extra, "publications.yml")
+  
+#write bibtext file
+  write.table(bib, "publications.bib", row.names=FALSE, col.names = FALSE, quote = FALSE)
+
+```
+
+
+```{r}
+#| label: build-rows
+
+#for debugging
+  #bib_extra  <- yaml::read_yaml("publications/publications.yml")
+  #bib  <- ReadBib("publications/publications.bib", check = TRUE)
+
+bib_extra  <- yaml::read_yaml("publications.yml")
+bib  <- ReadBib("publications.bib", check = TRUE)
+rows <- create_rows(bib, bib_extra)
+
+```
+
+## Peer-Reviewed Publications
+
+```{r}
+#| label: render-publications-submit
+
+years <- "In Review"
+
+groups <- lapply(years, function(y) {
+  subset <- rows |> filter(inreview & !informal)
+  subset_min <- subset |>
+    select(
+      key, entry, has_preprint_key, has_materials_key, title, 
+      authors_card, year, venue,
+      abstract, bibtex, 
+      preprint_url, materials_url, 
+      article_url, doi_url, primary,
+      inreview
+    )
+  cards <- pmap(subset_min, build_card)
+
+  tags$div(
+    class = "year-group",
+    tags$h2(class = "year-title anchored", id = paste0("y-", y), str_to_title(y)),
+    tags$div(cards)
+  )
+})
+
+browsable(tags$div(
+  groups
+))
+```
+
+
+```{r}
+#| label: render-publications-peer
+
+years <- rows |> filter(!inreview & !informal) |>
+  distinct(year) |>
+  arrange(desc(year)) |>
+  pull(year)
+
+groups <- lapply(years, function(y) {
+  subset <- rows |> filter(year == y & !inreview & !informal)
+  subset_min <- subset |>
+    select(
+      key, entry, has_preprint_key, has_materials_key, title, 
+      authors_card, year, venue,
+      abstract, bibtex, 
+      preprint_url, materials_url, 
+      article_url, doi_url, primary,
+      inreview
+    )
+  cards <- pmap(subset_min, build_card)
+
+  tags$div(
+    class = "year-group",
+    tags$h2(class = "year-title anchored", id = paste0("y-", y), str_to_title(y)),
+    tags$div(cards)
+  )
+})
+
+browsable(tags$div(
+  groups
+))
+``` 
+
+## Refereed Technical and Extension Publications
+
+```{r}
+#| label: render-publications-informal
+
+years <- rows |> filter(!inreview & informal) |>
+  distinct(year) |>
+  arrange(desc(year)) |>
+  pull(year)
+
+groups <- lapply(years, function(y) {
+  subset <- rows |> filter(year == y & informal)
+  subset_min <- subset |>
+    select(
+      key, entry, has_preprint_key, has_materials_key, title, 
+      authors_card, year, venue,
+      abstract, bibtex, 
+      preprint_url, materials_url, 
+      article_url, doi_url, primary,
+      inreview
+    )
+  cards <- pmap(subset_min, build_card)
+
+  tags$div(
+    class = "year-group",
+    tags$h2(class = "year-title anchored", id = paste0("y-", y), str_to_title(y)),
+    tags$div(cards)
+  )
+})
+
+browsable(tags$div(
+  groups,
+  tags$hr(),
+  tags$div(
+    class = "code-attribution",
+    "Publication card functionality adapted from ",
+    tags$a(
+      "AffCom Lab",
+      href = "https://affcom.ku.edu/publications.html",
+      target = "_blank",
+      rel = "noopener"
+    ),
+    "."
+  )
+))
+```

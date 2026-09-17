@@ -1,33 +1,328 @@
-- key: pikeCompendiumForestHydrology2010
-  title: Compendium of forest hydrology and geomorphology in British Columbia
+- key: BladonBrownTrees2004
+  title: Brown trees in green-tree retention
   authors:
-  - firstName: Robin G.
-    lastName: Pike
-    creatorType: editor
-  - firstName: T. E.
-    lastName: Redding
-    creatorType: editor
-  - firstName: R. D.
-    lastName: Moore
-    creatorType: editor
-  - firstName: R. D.
-    lastName: Winkler
-    creatorType: editor
   - firstName: Kevin D.
     lastName: Bladon
-    creatorType: editor
-  date: '2010'
+    creatorType: author
+  date: '2004'
+  journal: Environmental Research News in Alberta
+  volume: '5'
+  issue: '1'
+  pages: 7-8
+  doi: ~
+  abstract: ~
+  url: ~
+  has_article: no
+  primary: no
+  inreview: no
+  informal: yes
+- key: BladonResidualTreesUnder2006
+  title: Residual trees are under water stress in variable retention stands. Centre
+    for Enhanced Forest Management
+  authors:
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  - firstName: Victor J.
+    lastName: Lieffers
+    creatorType: author
+  - firstName: Uldis
+    lastName: Silins
+    creatorType: author
+  - firstName: Simon M
+    lastName: Landhäusser
+    creatorType: author
+  date: August 2006
+  journal: Advances in Forestry Research
+  volume: ~
+  issue: ~
+  pages: ~
+  doi: ~
+  abstract: ~
+  url: ~
+  has_article: no
+  primary: no
+  inreview: no
+  informal: yes
+- key: BladonLessonsLearnedObservations2008
+  title: 'Lessons learned from observations of mortality of residual trees following
+    variable retention in west-central Alberta. In Overcoming Obstacles to Variable
+    Retention in Forest Management: Science to Management Forum Proceedings, September
+    25–27, 2007'
+  authors:
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  - firstName: Uldis
+    lastName: Silins
+    creatorType: author
+  - firstName: Victor J.
+    lastName: Lieffers
+    creatorType: author
+  - firstName: S. M.
+    lastName: Landhausser
+    creatorType: author
+  date: '2008'
+  journal: BC Journal of Ecosystems and Management
+  volume: '8'
+  issue: '3'
+  pages: 73-76
+  doi: ~
+  abstract: ~
+  url: ~
+  has_article: no
+  primary: no
+  inreview: no
+  informal: yes
+- key: BladonStressMortality2006
+  title: Stress and mortality of four boreal tree species following variable retention
+    harvesting
+  authors:
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  date: '2006'
   journal: ~
   volume: ~
   issue: ~
   pages: ~
   doi: ~
   abstract: ~
-  url: https://www.for.gov.bc.ca/hfd/pubs/Docs/Lmh/Lmh66.htm
+  url: ~
+  has_article: no
   primary: no
   inreview: no
   informal: yes
-- key: WiensczykClimateChangesDisturbance
+- key: BladonStructureTreesVariable2008
+  title: What happens to structure trees that are left in variable retention cutovers?
+  authors:
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  - firstName: Victor J.
+    lastName: Lieffers
+    creatorType: author
+  date: '2008'
+  journal: ~
+  volume: ~
+  issue: ~
+  pages: ~
+  doi: ~
+  abstract: ~
+  url: ~
+  has_article: no
+  primary: no
+  inreview: no
+  informal: yes
+- key: bladonChapter9ControlMitigationMeasures2008
+  title: 'Chapter 9: Control and mitigation measures for fire: Hydrologic considerations'
+  authors:
+  - firstName: Kevin D
+    lastName: Bladon
+    creatorType: author
+  - firstName: R.
+    lastName: Rothwell
+    creatorType: author
+  - firstName: L.
+    lastName: Spillios
+    creatorType: author
+  date: '2008'
+  journal: ~
+  volume: ~
+  issue: ~
+  pages: ~
+  doi: ~
+  abstract: ~
+  url: ~
+  has_article: no
+  primary: no
+  inreview: no
+  informal: yes
+- key: BladonHydrologicConcernsCold2008
+  title: 'Chapter 12: Hydrologic concerns of cold climate harvesting'
+  authors:
+  - firstName: Kevin D
+    lastName: Bladon
+    creatorType: author
+  - firstName: R.
+    lastName: Rothwell
+    creatorType: author
+  - firstName: L.
+    lastName: Spillios
+    creatorType: author
+  date: '2008'
+  journal: ~
+  volume: ~
+  issue: ~
+  pages: ~
+  doi: ~
+  abstract: ~
+  url: ~
+  has_article: no
+  primary: no
+  inreview: no
+  informal: yes
+- key: EmelkoDrinkingWaterTreatability2008
+  title: Drinking water treatability implications of severe wildfire
+  authors:
+  - firstName: Monica B.
+    lastName: Emelko
+    creatorType: author
+  - firstName: Uldis
+    lastName: Silins
+    creatorType: author
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  - firstName: Micheal
+    lastName: Stone
+    creatorType: author
+  date: '2008'
+  journal: ~
+  volume: ~
+  issue: ~
+  pages: ~
+  doi: ~
+  abstract: ~
+  url: ~
+  has_article: no
+  primary: no
+  inreview: no
+  informal: yes
+- key: SilinsSouthernRockiesWatershed2009b
+  title: 'Southern Rockies Watershed Project: Impact of natural disturbance by wildfire
+    on hydrology, water quality, and aquatic ecology'
+  authors:
+  - firstName: Uldis
+    lastName: Silins
+    creatorType: author
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  - firstName: Micheal
+    lastName: Stone
+    creatorType: author
+  - firstName: Monica B.
+    lastName: Emelko
+    creatorType: author
+  - firstName: Sarah
+    lastName: Boon
+    creatorType: author
+  date: '2009'
+  journal: ~
+  volume: ~
+  issue: ~
+  pages: '89'
+  doi: ~
+  abstract: ~
+  url: ~
+  has_article: no
+  primary: no
+  inreview: no
+  informal: yes
+- key: BladonLinkingSilviculture2008
+  title: Linking silviculture to watershed management
+  authors:
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  - firstName: Uldis
+    lastName: Silins
+    creatorType: author
+  date: August 2008
+  journal: Canadian Silviculture
+  volume: ~
+  issue: ~
+  pages: 6-10
+  doi: ~
+  abstract: ~
+  url: ~
+  has_article: yes
+  primary: no
+  inreview: no
+  informal: no
+- key: BladonOneWatershed2009
+  title: One Watershed – One Water Conference Summary
+  authors:
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  date: '2009'
+  journal: LINK
+  volume: '4'
+  issue: ~
+  pages: 1-4
+  doi: ~
+  abstract: ~
+  url: ~
+  has_article: no
+  primary: no
+  inreview: no
+  informal: yes
+- key: ReddingMountainPineBeetle2009
+  title: Mountain pine beetle and watershed management
+  authors:
+  - firstName: Todd
+    lastName: Redding
+    creatorType: author
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  date: '2009'
+  journal: Streamline
+  volume: '13'
+  issue: '1'
+  pages: 29-31
+  doi: ~
+  abstract: ~
+  url: ~
+  has_article: yes
+  primary: no
+  inreview: no
+  informal: yes
+- key: BladonWildfireWatershedHydrology2009
+  title: 'Wildfire and watershed hydrology: Key findings from a workshop'
+  authors:
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  - firstName: Todd
+    lastName: Redding
+    creatorType: author
+  date: '2009'
+  journal: Streamline
+  volume: '13'
+  issue: '1'
+  pages: 1-4
+  doi: ~
+  abstract: ~
+  url: ~
+  has_article: yes
+  primary: no
+  inreview: no
+  informal: no
+- key: RobinneWildfiresCodeRed
+  title: 'Wildfires in our watersheds: "Code red" for source water supply2021'
+  authors:
+  - firstName: François-Nicolas
+    lastName: Robinne
+    creatorType: author
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  date: '2021'
+  journal: Water Canada
+  volume: ~
+  issue: November/December 2021
+  pages: 26-27
+  doi: ~
+  abstract: ~
+  url: https://www.watercanada.net/wp-content/uploads/2021/11/WC121_NovDec021_DIGITAL.pdf
+  has_article: yes
+  primary: yes
+  inreview: no
+  informal: yes
+- key: WiensczykClimateChangesDisturbance2012
   title: 'Climate-induced changes to natural disturbance regimes and management responses
     in British Columbia: Impacts on natural and human systems'
   authors:
@@ -75,6 +370,101 @@
   doi: ~
   abstract: ~
   url: ~
+  has_article: no
+  primary: no
+  inreview: no
+  informal: yes
+- key: SilinsSouthernRockiesWatershed2009
+  title: 'Southern Rockies Watershed Project: How wildfire and salvage logging affect
+    water quality and aquatic ecology'
+  authors:
+  - firstName: Uldis
+    lastName: Silins
+    creatorType: author
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  - firstName: Axel
+    lastName: Anderson
+    creatorType: author
+  - firstName: John
+    lastName: Diiwu
+    creatorType: author
+  - firstName: Monica B.
+    lastName: Emelko
+    creatorType: author
+  - firstName: Micheal
+    lastName: Stone
+    creatorType: author
+  - firstName: Sarah
+    lastName: Boon
+    creatorType: author
+  date: '2009'
+  journal: Streamline
+  volume: '12'
+  issue: '2'
+  pages: 1-7
+  doi: ~
+  abstract: ~
+  url: ~
+  has_article: yes
+  primary: no
+  inreview: no
+  informal: yes
+- key: BoonComparisonsFieldTechniques2009
+  title: Comparison of field techniques for measuring snow density at a point
+  authors:
+  - firstName: Sarah
+    lastName: Boon
+    creatorType: author
+  - firstName: Reed
+    lastName: Davis
+    creatorType: author
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  - firstName: Michael
+    lastName: Wagner
+    creatorType: author
+  date: '2009'
+  journal: Streamline
+  volume: '12'
+  issue: '2'
+  pages: 8-12
+  doi: ~
+  abstract: ~
+  url: ~
+  has_article: yes
+  primary: no
+  inreview: no
+  informal: no
+- key: pikeCompendiumForestHydrology2010
+  title: Compendium of forest hydrology and geomorphology in British Columbia
+  authors:
+  - firstName: Robin G.
+    lastName: Pike
+    creatorType: editor
+  - firstName: T. E.
+    lastName: Redding
+    creatorType: editor
+  - firstName: R. D.
+    lastName: Moore
+    creatorType: editor
+  - firstName: R. D.
+    lastName: Winkler
+    creatorType: editor
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: editor
+  date: '2010'
+  journal: ~
+  volume: ~
+  issue: ~
+  pages: ~
+  doi: ~
+  abstract: ~
+  url: https://www.for.gov.bc.ca/hfd/pubs/Docs/Lmh/Lmh66.htm
+  has_article: yes
   primary: no
   inreview: no
   informal: yes
@@ -117,29 +507,10 @@
   doi: 10.2737/SRS-GTR-238
   abstract: ~
   url: https://research.fs.usda.gov/treesearch/58095
+  has_article: yes
   primary: no
   inreview: no
   informal: no
-- key: RobinneWildfiresCodeRed
-  title: 'Wildfires in our watersheds: "Code red" for source water supply'
-  authors:
-  - firstName: François-Nicolas
-    lastName: Robinne
-    creatorType: author
-  - firstName: Kevin D.
-    lastName: Bladon
-    creatorType: author
-  date: '2021'
-  journal: Water Canada
-  volume: ~
-  issue: November/December 2021
-  pages: 26-27
-  doi: ~
-  abstract: ~
-  url: https://www.watercanada.net/wp-content/uploads/2021/11/WC121_NovDec021_DIGITAL.pdf
-  primary: yes
-  inreview: no
-  informal: yes
 - key: wattsHotAirDry2024
   title: 'Hot air or dry dirt: Investigating the greater drought risk to forests in
     the Pacific Northwest'
@@ -165,6 +536,7 @@
   doi: ~
   abstract: ~
   url: https://research.fs.usda.gov/treesearch/67961
+  has_article: yes
   primary: no
   inreview: no
   informal: yes
@@ -228,6 +600,7 @@
     findings underscore the value of long-term monitoring of reference sites for disentangling
     water quality responses to wildfire relative to natural climatic variability.
   url: ~
+  has_article: no
   primary: yes
   inreview: yes
   informal: no
@@ -261,6 +634,7 @@
   doi: ~
   abstract: ~
   url: ~
+  has_article: no
   primary: yes
   inreview: yes
   informal: no
@@ -306,6 +680,7 @@
   doi: ~
   abstract: ~
   url: ~
+  has_article: no
   primary: no
   inreview: yes
   informal: no
@@ -333,6 +708,7 @@
   doi: ~
   abstract: ~
   url: ~
+  has_article: no
   primary: yes
   inreview: yes
   informal: no
@@ -377,6 +753,7 @@
   doi: 10.5558/tfc2016-012
   abstract: ~
   url: https://pubs.cif-ifc.org/doi/10.5558/tfc2016-012
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -404,6 +781,7 @@
   doi: ~
   abstract: ~
   url: ~
+  has_article: no
   primary: yes
   inreview: yes
   informal: no
@@ -437,6 +815,7 @@
   doi: ~
   abstract: ~
   url: ~
+  has_article: no
   primary: yes
   inreview: yes
   informal: no
@@ -486,6 +865,7 @@
     showed no effect of iron enrichment on phosphorus uptake. Iron does not solve
     the mystery of D. geminata growth causing nuisance blooms worldwide.
   url: http://www.nrcresearchpress.com/doi/10.1139/f2012-112
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -541,6 +921,7 @@
     Species susceptibility to atmospheric moisture-stress due to increased ETP following
     partial harvesting can be ranked as: P. balsamifera>B. papyrifera>P. glauca.'
   url: https://www.sciencedirect.com/science/article/pii/S0168192306001158
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -594,6 +975,7 @@
     in larger patches or more sheltered landscape positions could reduce the water
     stress to which these trees are subjected, thereby reducing dieback and mortality.
   url: https://academic.oup.com/treephys/article-lookup/doi/10.1093/treephys/27.7.1065
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -634,6 +1016,7 @@
     yield 19-times higher during snowmelt and 9-times higher during stormflow compared
     to unburned watersheds.
   url: https://www.semanticscholar.org/paper/Impacts-of-wildfire-and-post-fire-salvage-logging-Silins-Stone/ec0f285334ebdc1e1e13ea79ba786cf221e08f9e
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -681,6 +1064,7 @@
     Picea glauca, Populus balsamifera, Populus tremuloides, structural retention,
     sustainable forest management'
   url: http://pubs.cif-ifc.org/doi/10.5558/tfc84070-1
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -735,6 +1119,7 @@
     the most elevated N concentrations and production occurring during higher discharge
     periods (snowmelt freshet and storm flows).
   url: https://cdnsciencepub.com/doi/10.1139/X08-071
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -777,6 +1162,7 @@
     the range of impacts from both wildfire and post-disturbance management strategies
     such as salvage logging is likely to become increasingly important for land managers.
   url: https://www.sciencedirect.com/science/article/pii/S0341816209000885
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -829,6 +1215,7 @@
     availability, and quality) and their relationship to “treatability” in response
     to land disturbance.
   url: https://www.sciencedirect.com/science/article/pii/S0043135410006275
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -890,6 +1277,7 @@
     of simultaneous catchment-scale and process-focused research to better elucidate
     the physical drivers influencing Ts response to disturbance.
   url: https://www.sciencedirect.com/science/article/pii/S0022169414003606
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -959,6 +1347,7 @@
     invertebrate consumers, and fish) may be long-lived legacies of wildfire because
     of the slow recovery of P regimes. Copyright © 2014 John Wiley & Sons, Ltd.'
   url: https://onlinelibrary.wiley.com/doi/abs/10.1002/eco.1474
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -998,6 +1387,7 @@
     and mitigation strategies to protect globally critical water supplies originating
     in forested environments.
   url: ~
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -1046,6 +1436,7 @@
     to avoid unnecessary and arbitrary adjustment of parameters to compensate for
     the errors in the model structure.
   url: https://www.sciencedirect.com/science/article/pii/S1364815215300499
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -1069,6 +1460,7 @@
   doi: 10.5558/tfc2016-001
   abstract: ~
   url: https://pubs.cif-ifc.org/doi/10.5558/tfc2016-001
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -1118,6 +1510,7 @@
     believe that such an approach can provide important insights for water security
     by guiding global freshwater resource preservation.
   url: https://www.mdpi.com/1999-4907/7/1/22
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -1181,6 +1574,7 @@
     bioavailable P that contributes to a legacy of wildfire impacts on downstream
     water quality, aquatic ecology, and drinking water treatability.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1111/gcb.13073
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -1231,6 +1625,7 @@
     evidence that current harvesting practices have improved protection for stream
     water temperatures.
   url: https://www.sciencedirect.com/science/article/pii/S0378112716304364
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -1289,6 +1684,7 @@
     scales, and the relationship between overlapping disturbances including those
     other than wildfire is necessary for the development of risk assessment tools.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.11208
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -1341,6 +1737,7 @@
     the overall SSY of a catchment as well as its susceptibility to increases in SSY
     following forest harvesting.
   url: https://www.sciencedirect.com/science/article/pii/S0022169417301944
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -1391,6 +1788,7 @@
     differences in the components of the overall risk could help adapting those policies
     to different regional contexts.
   url: https://www.sciencedirect.com/science/article/pii/S0048969717321101
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -1457,6 +1855,7 @@
     work needs to quantify storage in paired watershed studies to inform sustainable
     water management.
   url: https://www.nature.com/articles/s41893-018-0099-8
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -1519,6 +1918,7 @@
     suspended sediment concentrations and yields after contemporary harvesting were
     similar to historical pre-treatment levels.
   url: https://www.sciencedirect.com/science/article/pii/S0378112717310800
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -1569,6 +1969,7 @@
     potential role of wildfire and prescribed fire in regional water resource management,
     under a changing climate.
   url: https://www.nature.com/articles/s41467-018-03735-6
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -1602,6 +2003,7 @@
     insights on the water security paradigm and the value of hydrological services
     in fire-affected areas around the globe.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1029/2018EF000867
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -1644,6 +2046,7 @@
     suspended sediment yields and may be more vulnerable to increases in sediment
     yields following disturbances.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1029/2017WR021728
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -1697,6 +2100,7 @@
     of catchment underlain by more resistant lithology at both the headwater and downstream
     sites, reducing the potential for the cooling influence of groundwater.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.11415
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -1714,6 +2118,7 @@
   doi: 10.1126/science.aar8120
   abstract: ~
   url: https://www.science.org/doi/10.1126/science.aar8120
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -1776,6 +2181,7 @@
     design of this tool readily allows its deployment at larger national and continental
     scales to inform broader water security frameworks.
   url: https://www.mdpi.com/1999-4907/10/5/384
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -1831,6 +2237,7 @@
     This study is the first to illustrate that chronic canopy disturbance from a foliage
     pathogen can influence catchment scale hydrology.
   url: https://www.sciencedirect.com/science/article/pii/S0048969719332401
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -1887,6 +2294,7 @@
     with expected warmer, drier conditions in the future may influence summer low
     streamflow and aquatic ecosystems.
   url: https://www.sciencedirect.com/science/article/pii/S0022169420302092
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -1943,6 +2351,7 @@
     directly addressing ecosystem services will help mitigate the increasing risks
     to water resources in northern forests.'
   url: https://www.sciencedirect.com/science/article/pii/S0022169419310959
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -1997,6 +2406,7 @@
     of climate, geology, topography, and vegetation in the Pacific Northwest, which
     drive highly variable hydrologic and geomorphic processes in the region.'
   url: https://www.sciencedirect.com/science/article/pii/S0378112720301572
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -2054,6 +2464,7 @@
     if similar patterns appear evident after forest harvesting in other hydro-climatic
     settings.'
   url: https://www.sciencedirect.com/science/article/pii/S0022169419311874
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -2104,6 +2515,7 @@
     that drive flow permanence and highlighted the uncertainty in projecting the precense
     of water in streams across diverse regions.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.13889
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -2155,6 +2567,7 @@
     differences in the long-term recovery of catchment-scale ecohydrologic processes
     and streamflow.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.13665
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -2227,6 +2640,7 @@
     severity fire may be an important mechanism by which PyC is produced and transported
     into mineral soils.
   url: https://www.frontiersin.org/journals/forests-and-global-change/articles/10.3389/ffgc.2020.00006/full
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -2286,6 +2700,7 @@
     to account for wildfire consequences and feedbacks with hydrological and biogeochemical
     processes.
   url: https://www.sciencedirect.com/science/article/pii/S0022169420308635
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -2340,6 +2755,7 @@
     effects of post-fire land management approaches to improve our understanding of
     the mechanisms driving post-fire erosion and sediment delivery.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.13932
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -2384,6 +2800,7 @@
     snow disappearance dates across the PNW, forests will likely experience more frequent
     drought conditions that will impact post-wildfire vegetation regrowth.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1029/2021JG006465
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -2439,6 +2856,7 @@
     and hydraulic properties through time will improve our mechanistic understanding
     of post-fire hydrologic responses and recovery.
   url: https://www.sciencedirect.com/science/article/pii/S0022169421008222
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -2539,6 +2957,7 @@
     tools for use by water and land managers worldwide to leverage several decades
     worth of data and knowledge on post-fire hydrology.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.14086
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -2599,6 +3018,7 @@
     are ongoing. Phase 3 data are currently being collected and will be archived after
     a post-harvest monitoring period.'
   url: https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.14207
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -2642,6 +3062,7 @@
     is needed to understand if combined soil-terrain metrics would be a more useful
     proxy for VWC than terrain-based wetness metrics alone.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1029/2020WR028343
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -2689,6 +3110,7 @@
     can vary across topographic positions along a hillslope and do not always follow
     topographic controls.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1029/2020WR029170
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -2756,6 +3178,7 @@
     land managers to solve applied problems while simultaneously discovering new fundamental
     knowledge about how watersheds function.
   url: https://www.frontiersin.org/journals/forests-and-global-change/articles/10.3389/ffgc.2021.691732/full
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -2825,6 +3248,7 @@
     catchments have substantially improved outcomes for stream biota relative to unregulated
     forest harvest, at least for short periods of time after logging (i.e., ≤ 8 years).
   url: https://www.sciencedirect.com/science/article/pii/S0378112721005363
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -2875,6 +3299,7 @@
     suggesting that streams in these different regions may respond differentially
     to forest disturbances or climate change.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.14517
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -2923,6 +3348,7 @@
     that allow us to better understand how native fishes in natural systems cope with
     projected increases in stream temperatures.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1002/ecs2.4233
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -3220,6 +3646,7 @@
     and accessing knowledge across diverse communities can we effectively undertake
     research that improves outcomes in our more fiery future.
   url: https://doi.org/10.1093/pnasnexus/pgac115
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -3286,6 +3713,7 @@
     severity impact DOM dynamics immediately following fire activity and highlight
     a key gap in our knowledge of post-fire DOM transport to streams.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1029/2022GL099535
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -3317,6 +3745,7 @@
   doi: 10.1080/07011784.2022.2032367
   abstract: ~
   url: https://www.tandfonline.com/doi/full/10.1080/07011784.2022.2032367
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -3363,6 +3792,7 @@
     and larger basin scale, which is becoming increasingly critical for effective
     forest and water management decisions.
   url: https://www.sciencedirect.com/science/article/pii/S0022169423005279
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -3408,6 +3838,7 @@
     observations complemented with hydrologic modeling, and (3) defining optimal assemblages
     of recovery metrics and criteria for common hydrologic concerns and regions.</p>'
   url: https://reference-global.com/article/10.2478/johh-2022-0033
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -3452,6 +3883,7 @@
     offers a robust framework for the production of other national datasets following
     an established international standard.
   url: https://www.nature.com/articles/s41597-023-02732-9
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -3505,6 +3937,7 @@
     for improving the understanding of hydrologic connectivity and shifts in the dominant
     runoff contributions to streamflow during storm events.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.14795
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -3553,6 +3986,7 @@
     in combination with increases in VPD are likely to reduce forest productivity
     regardless of soil moisture availability.
   url: https://www.sciencedirect.com/science/article/pii/S0168192322004543
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -3607,6 +4041,7 @@
     may be to that of natural DOM in the river corridor, furthering our understanding
     of how PyOM may influence riverine biogeochemical cycling.
   url: https://bg.copernicus.org/articles/20/3449/2023/
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -3652,6 +4087,7 @@
     loads in downstream waters if prescribed fires reduce subsequent high severity
     fires in the landscape.
   url: https://www.sciencedirect.com/science/article/pii/S0048969722078342
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -3706,6 +4142,7 @@
     to wildfire. Moreover, our results also indicated that the seasonal timing of
     sampling can influence the observed response of DOC concentrations to wildfire.
   url: https://bg.copernicus.org/articles/21/3093/2024/
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -3771,6 +4208,7 @@
     physical properties compared to unburned materials, which influence their cycling and fate in the natural environment. Visual burn severity assessment is used to evaluate post-fire alterations to the landscape in field-based studies, yet muffle furnace methods are commonly used in laboratory studies to assess molecular scale alterations along a temperature continuum. Here, we examined solid and leachable organic matter characteristics from chars visually characterized as low burn severity that were created either on an open air burn table or from low-temperature muffle furnace burns. We assessed how the different combustion conditions influence solid and dissolved organic matter chemistries and explored the potential influence of these results on the environmental fate and reactivity. Notably, muffle furnace chars produced less leachable carbon and nitrogen than open air chars across land cover types. Organic matter produced from muffle furnace burns was more homogeneous than open air chars. This work highlights chemical heterogeneities that exist within a single burn severity category, potentially influencing our conceptual understanding of pyrogenic organic matter cycling in the natural environment, including transport and processing in watersheds. Therefore, we suggest that open air burn studies are needed to further advance our understanding of pyrogenic organic matter’s environmental reactivity and
     fate.
   url: https://doi.org/10.1021/acs.est.3c10826
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -3832,6 +4270,7 @@
     relationships between forest management activities and the thermal regimes of
     headwater streams.
   url: https://www.sciencedirect.com/science/article/pii/S0378112723008150
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -3895,6 +4334,7 @@
     future studies into the post-fire responses on hydrology that are crucial for
     water and forest management.'
   url: https://www.sciencedirect.com/science/article/pii/S0022169424010084
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -3949,6 +4389,7 @@
     is needed to better understand the magnitude of this effect across sites with
     variable subsurface water storage and microclimate.
   url: https://www.sciencedirect.com/science/article/pii/S0378112723007636
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -4004,6 +4445,7 @@
     with the goal of informing future research on stream chemistry responses to low,
     moderate and mixed severity wildfire.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.15231
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -4052,6 +4494,7 @@
     to predicting wildfire effects on aquatic biogeochemical cycling and preserving
     ecosystem health and source water quality.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1029/2024JG008687
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -4116,6 +4559,7 @@
     food webs, and fish and for identifying contexts where fires could have deleterious
     impacts on fishes.
   url: https://doi.org/10.1007/s10021-024-00955-4
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -4186,6 +4630,7 @@
     our ability to describe DOM composition in a framework that can be more directly
     related with field and remote-sensing based metrics.
   url: https://www.sciencedirect.com/science/article/pii/S004896972408197X
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -4233,6 +4678,7 @@
     could help illuminate biogeochemical connections to identify the source, magnitude,
     and legacy of disturbance impacts.
   url: https://www.sciencedirect.com/science/article/pii/S0378112725002956
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -4287,6 +4733,7 @@
     indicate the need for further research to capture the complexities of post-wildfire
     water quality dynamics and refine treatment strategies for wildfire-impacted watersheds.
   url: https://www.sciencedirect.com/science/article/pii/S2589914725000568
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -4364,6 +4811,7 @@
     transformation to both the composition of the solid charred material and how P
     compounds are mobilized, which may influence its environmental cycling and fate.
   url: https://bg.copernicus.org/articles/22/4491/2025/
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -4411,6 +4859,7 @@
     our results trend in the opposite direction from drier, lower net primary productivity
     regions that are typically studied for post-wildfire soil hydraulic properties.
   url: https://onlinelibrary.wiley.com/doi/abs/10.1029/2025JG009611
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -4448,6 +4897,7 @@
     aiding proactive management and mitigation strategies to protect water supply
     and enhance ecosystem resilience in wildfire-prone regions.
   url: https://www.sciencedirect.com/science/article/pii/S1364815226000435
+  has_article: yes
   primary: yes
   inreview: no
   informal: no
@@ -4552,6 +5002,7 @@
     of post-wildfire water quality impacts in this and other increasingly wildfire-affected
     regions.
   url: https://doi.org/10.1088/3033-4942/ae36cb
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -4603,6 +5054,7 @@
     of wildfire-affected soil leachate, although further validation with real post-fire
     source waters is needed.
   url: https://www.sciencedirect.com/science/article/pii/S1383586626022628
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -4661,6 +5113,7 @@
     a safer and viable alternative to hand-felling on steep (> 30% slopes) terrain
     with Ultisol soils in dry conditions.
   url: https://doi.org/10.1007/s44391-026-00057-9
+  has_article: yes
   primary: no
   inreview: no
   informal: no
@@ -4714,6 +5167,7 @@
     regimes are shifting, improving understanding of post-fire nutrient export responses
     is critical to protect freshwater resources and aquatic ecosystems.'
   url: https://onlinelibrary.wiley.com/doi/abs/10.1029/2025WR040678
+  has_article: yes
   primary: yes
   inreview: no
   informal: no

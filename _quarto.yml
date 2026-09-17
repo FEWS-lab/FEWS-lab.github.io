@@ -12,7 +12,7 @@ website:
         text: Home
       - kevin-bladon.qmd
       - research/index.qmd
-      - publications/publications.qmd
+      - publications/index.qmd
   page-footer:
       background: light # or `dark` or omit this option altogether (footer color will match page body color)
       left: | 
