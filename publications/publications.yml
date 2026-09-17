@@ -1,3 +1,65 @@
+- key: RobinneWildfiresCodeRed2021
+  title: 'Wildfires in our watersheds: "Code red" for source water supply'
+  authors:
+  - firstName: François-Nicolas
+    lastName: Robinne
+    creatorType: author
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  date: '2021'
+  journal: Water Canada
+  volume: ~
+  issue: November/December 2021
+  pages: 26-27
+  doi: ~
+  abstract: ~
+  url: https://www.watercanada.net/wp-content/uploads/2021/11/WC121_NovDec021_DIGITAL.pdf
+  has_article: yes
+  primary: yes
+  inreview: no
+  informal: yes
+- key: silinsImpactsWildfirePostfire2008
+  title: Impacts of wildfire and post-fire salvage logging on sediment transfer in
+    the Oldman watershed, Alberta, Canada
+  authors:
+  - firstName: U.
+    lastName: Silins
+    creatorType: author
+  - firstName: M.
+    lastName: Stone
+    creatorType: author
+  - firstName: M.
+    lastName: Emelko
+    creatorType: author
+  - firstName: K.
+    lastName: Bladon
+    creatorType: author
+  date: '2008'
+  journal: IAHS-AISH publication
+  volume: ~
+  issue: ~
+  pages: ~
+  doi: ~
+  abstract: The 2003 Lost Creek fire burned 21 000 ha of forested land in the Oldman
+    River basin, Alberta, Canada. Seven watersheds, with varying degrees of natural
+    and man-made land disturbance (burned, post- fire salvage logged, unburned) were
+    monitored for three years to assess sediment concentrations and production (export
+    and yield) over a range of flow regimes (spring melt, baseflow and stormflow).
+    Suspended sediment concentrations were 6-times higher in burned watersheds and
+    11-times higher in post- fire salvage logged watersheds than in unburned watersheds.
+    Sediment availability was greater in both burned and post-fire salvage logged
+    watersheds but varied with flow condition; particularly during the snowmelt freshet
+    and stormflow. In burned watersheds, sediment yield was 5-times higher during
+    snowmelt and 13-times higher during stormflow than in unburned watersheds. Post-fire
+    salvage logging produced much greater impacts than wildfire alone, with mean sediment
+    yield 19-times higher during snowmelt and 9-times higher during stormflow compared
+    to unburned watersheds.
+  url: https://www.semanticscholar.org/paper/Impacts-of-wildfire-and-post-fire-salvage-logging-Silins-Stone/ec0f285334ebdc1e1e13ea79ba786cf221e08f9e
+  has_article: yes
+  primary: no
+  inreview: no
+  informal: no
 - key: BladonBrownTrees2004
   title: Brown trees in green-tree retention
   authors:
@@ -301,27 +363,6 @@
   primary: no
   inreview: no
   informal: no
-- key: RobinneWildfiresCodeRed
-  title: 'Wildfires in our watersheds: "Code red" for source water supply2021'
-  authors:
-  - firstName: François-Nicolas
-    lastName: Robinne
-    creatorType: author
-  - firstName: Kevin D.
-    lastName: Bladon
-    creatorType: author
-  date: '2021'
-  journal: Water Canada
-  volume: ~
-  issue: November/December 2021
-  pages: 26-27
-  doi: ~
-  abstract: ~
-  url: https://www.watercanada.net/wp-content/uploads/2021/11/WC121_NovDec021_DIGITAL.pdf
-  has_article: yes
-  primary: yes
-  inreview: no
-  informal: yes
 - key: WiensczykClimateChangesDisturbance2012
   title: 'Climate-induced changes to natural disturbance regimes and management responses
     in British Columbia: Impacts on natural and human systems'
@@ -977,47 +1018,6 @@
   url: https://academic.oup.com/treephys/article-lookup/doi/10.1093/treephys/27.7.1065
   has_article: yes
   primary: yes
-  inreview: no
-  informal: no
-- key: silinsImpactsWildfirePostfire2008
-  title: Impacts of wildfire and post-fire salvage logging on sediment transfer in
-    the Oldman watershed, Alberta, Canada
-  authors:
-  - firstName: U.
-    lastName: Silins
-    creatorType: author
-  - firstName: M.
-    lastName: Stone
-    creatorType: author
-  - firstName: M.
-    lastName: Emelko
-    creatorType: author
-  - firstName: K.
-    lastName: Bladon
-    creatorType: author
-  date: '2008'
-  journal: IAHS-AISH publication
-  volume: ~
-  issue: ~
-  pages: ~
-  doi: ~
-  abstract: The 2003 Lost Creek fire burned 21 000 ha of forested land in the Oldman
-    River basin, Alberta, Canada. Seven watersheds, with varying degrees of natural
-    and man-made land disturbance (burned, post- fire salvage logged, unburned) were
-    monitored for three years to assess sediment concentrations and production (export
-    and yield) over a range of flow regimes (spring melt, baseflow and stormflow).
-    Suspended sediment concentrations were 6-times higher in burned watersheds and
-    11-times higher in post- fire salvage logged watersheds than in unburned watersheds.
-    Sediment availability was greater in both burned and post-fire salvage logged
-    watersheds but varied with flow condition; particularly during the snowmelt freshet
-    and stormflow. In burned watersheds, sediment yield was 5-times higher during
-    snowmelt and 13-times higher during stormflow than in unburned watersheds. Post-fire
-    salvage logging produced much greater impacts than wildfire alone, with mean sediment
-    yield 19-times higher during snowmelt and 9-times higher during stormflow compared
-    to unburned watersheds.
-  url: https://www.semanticscholar.org/paper/Impacts-of-wildfire-and-post-fire-salvage-logging-Silins-Stone/ec0f285334ebdc1e1e13ea79ba786cf221e08f9e
-  has_article: yes
-  primary: no
   inreview: no
   informal: no
 - key: bladonElevatedMortalityResidual2008

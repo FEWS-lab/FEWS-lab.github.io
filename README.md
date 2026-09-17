@@ -48,6 +48,6 @@ Publications are added to the website via a shared Zotero [group](https://www.zo
 
     Currently only one link per field is supported. If you use both separate them with a new line.
 
-6.  **In the code repository, re-render the publications page.** This is not technically required as when the website renders it will rerun everything. However, you will need a change in order to make a commit in GitHub and trigger the website update. Rendering the page is a good way to check that things look correct and trigger a change as it will update some intermediate publication files.
+6.  **In the code repository, re-render the publications page.** Due to the way the code is written this must be done locally to generate the files first before pushing changes.
 
 7.  **Commit your code**. This will push the changes and update the website with any new publications you've added.
