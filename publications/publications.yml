@@ -1,3 +1,68 @@
+- key: WamplerLongTermMonitoring
+  title: Long-term monitoring reveals muted, seasonally distinct water quality responses
+    to wildfire across a stream network in the Pacific Northwest, USA
+  authors:
+  - firstName: Katie A.
+    lastName: Wampler
+    creatorType: author
+  - firstName: Marta
+    lastName: Basso
+    creatorType: author
+  - firstName: Riley
+    lastName: Barton
+    creatorType: author
+  - firstName: David
+    lastName: Donahue
+    creatorType: author
+  - firstName: Lisa
+    lastName: Erkert
+    creatorType: author
+  - firstName: Ryan P.
+    lastName: Cole
+    creatorType: author
+  - firstName: Katherine E.
+    lastName: McCredie
+    creatorType: author
+  - firstName: Steven M.
+    lastName: Wondzell
+    creatorType: author
+  - firstName: Kevin D.
+    lastName: Bladon
+    creatorType: author
+  date: '2026'
+  journal: Water Resources Research
+  volume: ~
+  issue: ~
+  pages: ~
+  doi: ~
+  abstract: The occurrence of large, high severity wildfires has increased across
+    the Pacific Northwest, with potential effects on watershed processes and water
+    quality. However, quantifying the magnitude and persistence of wildfire impacts
+    remains challenging due to the unpredictable nature of wildfires and limited long-term
+    and pre-fire reference data. In our study we used a unique dataset of 19 years
+    of water quality data spanning 14 years pre-fire and 5 years post-fire across
+    eight sites in the Cascade Mountains of western Oregon to evaluate wildfire effects
+    on carbon, nitrogen, phosphorus, and sediment concentrations. Bayesian generalized
+    linear mixed models were used to quantify wildfire effects on concentration differences
+    across time (pre-/post-fire) and burn status (burned/unburned). Counter to much
+    of the literature from wildfires in other regions, we found muted and uncertain
+    wildfire effects. However, seasonal impacts were observed. During the dry summer
+    period, dissolved organic carbon increased (174 %) while orthophosphate (-53 %)
+    and nitrate (-113 %) decreased, suggesting increased productivity following wildfire.
+    The fall wetting-up period showed small increases in total suspended solids (140
+    %) and total organic carbon (35 %), which may reflect short-term increases in
+    available sediment from dry ravel, enhanced bank erosion, or entrainment of channel
+    sediment due to enhanced streamflow. We also found that site-level climate and
+    landscape characteristics were critical for accurately assessing wildfire impacts,
+    with daily precipitation strongly influencing constituent concentrations. Our
+    findings underscore the value of long-term monitoring of reference sites for disentangling
+    water quality responses to wildfire relative to natural climatic variability.
+  url: ~
+  has_article: no
+  primary: yes
+  inreview: yes
+  informal: no
+  materials: https://doi.org/10.6073/pasta/5bd185eb1e234d81b7b4c3fe0b72d592
 - key: RobinneWildfiresCodeRed2021
   title: 'Wildfires in our watersheds: "Code red" for source water supply'
   authors:
@@ -581,70 +646,6 @@
   primary: no
   inreview: no
   informal: yes
-- key: WamplerLongTermMonitoring
-  title: Long-term monitoring reveals muted, seasonally distinct water quality responses
-    to wildfire across a stream network in the Pacific Northwest, USA
-  authors:
-  - firstName: Katie A.
-    lastName: Wampler
-    creatorType: author
-  - firstName: Marta
-    lastName: Basso
-    creatorType: author
-  - firstName: Riley
-    lastName: Barton
-    creatorType: author
-  - firstName: David
-    lastName: Donahue
-    creatorType: author
-  - firstName: Lisa
-    lastName: Erkert
-    creatorType: author
-  - firstName: Ryan P.
-    lastName: Cole
-    creatorType: author
-  - firstName: Katherine E.
-    lastName: McCredie
-    creatorType: author
-  - firstName: Steven M.
-    lastName: Wondzell
-    creatorType: author
-  - firstName: Kevin D.
-    lastName: Bladon
-    creatorType: author
-  date: '2026'
-  journal: Water Resources Research
-  volume: ~
-  issue: ~
-  pages: ~
-  doi: ~
-  abstract: The occurrence of large, high severity wildfires has increased across
-    the Pacific Northwest, with potential effects on watershed processes and water
-    quality. However, quantifying the magnitude and persistence of wildfire impacts
-    remains challenging due to the unpredictable nature of wildfires and limited long-term
-    and pre-fire reference data. In our study we used a unique dataset of 19 years
-    of water quality data spanning 14 years pre-fire and 5 years post-fire across
-    eight sites in the Cascade Mountains of western Oregon to evaluate wildfire effects
-    on carbon, nitrogen, phosphorus, and sediment concentrations. Bayesian generalized
-    linear mixed models were used to quantify wildfire effects on concentration differences
-    across time (pre-/post-fire) and burn status (burned/unburned). Counter to much
-    of the literature from wildfires in other regions, we found muted and uncertain
-    wildfire effects. However, seasonal impacts were observed. During the dry summer
-    period, dissolved organic carbon increased (174 %) while orthophosphate (-53 %)
-    and nitrate (-113 %) decreased, suggesting increased productivity following wildfire.
-    The fall wetting-up period showed small increases in total suspended solids (140
-    %) and total organic carbon (35 %), which may reflect short-term increases in
-    available sediment from dry ravel, enhanced bank erosion, or entrainment of channel
-    sediment due to enhanced streamflow. We also found that site-level climate and
-    landscape characteristics were critical for accurately assessing wildfire impacts,
-    with daily precipitation strongly influencing constituent concentrations. Our
-    findings underscore the value of long-term monitoring of reference sites for disentangling
-    water quality responses to wildfire relative to natural climatic variability.
-  url: ~
-  has_article: no
-  primary: yes
-  inreview: yes
-  informal: no
 - key: RoonStreamTemperatureHarvesting
   title: Distinct stream temperature responses to forest harvesting and severe wildfire
     in a managed Pacific Northwest, USA watershed
