@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Publications – FEWS Lab</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -57,10 +63,10 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b971b2b56eaf3dae98cf64248e71ab0c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4fc2fb3bb811df38ee102fa1b646a622.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
@@ -92,8 +98,10 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script src="publications.js"></script>
 
 
+<link rel="stylesheet" href="pub-style.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -104,7 +112,8 @@ div.csl-indent {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/FEWS-logo.png" alt="" class="navbar-logo">
+    <img src="../images/FEWS-logo.png" alt="" class="navbar-logo light-content">
+    <img src="../images/FEWS-logo.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">FEWS Lab</span>
@@ -129,7 +138,7 @@ div.csl-indent {
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../publications/publications.html" aria-current="page"> 
+    <a class="nav-link active" href="../publications/index.html" aria-current="page"> 
 <span class="menu-text">Publications</span></a>
   </li>  
 </ul>
@@ -185,193 +194,6 @@ div.csl-indent {
 <li><em>Materials</em> leads to a data package or open repository with data, code, and other open-science resources.</li>
 </ul>
 <p><span style="font-size:0.9rem; opacity:0.8; margin-bottom:0.5rem;">★ = Work led or co-led by our lab</span></p>
-<div class="cell">
-<style type="text/css">
-
-h2 {
-  margin-bottom: 0rem;
-}
-
-#quarto-bibliography {
-  display: none;
-}
-/* Group header */
-.year-group { margin: 28px 0 8px; }
-.year-title { margin: 0; font-size: 1.35rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 2px; }
-
-/* Card + layout */
-.pub-card {
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  padding: 16px 16px 10px 16px;
-  margin: 14px 0;
-  background: #fff;
-}
-.pub-title { font-weight: 600; font-size: 1.05rem; margin-bottom: 4px; }
-.pub-title a { text-decoration: none; }
-.pub-meta  { color: #555; font-size: 0.95rem; margin-bottom: 8px; }
-
-/* Actions row */
-.pub-actions {
-  display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center;
-  margin-top: 8px; margin-bottom: 8px;
-}
-.pub-actions a {
-  text-decoration: none; font-size: 0.92rem;
-  border-bottom: 1px dotted #999; color: #0b66c3; cursor: pointer;
-}
-.pub-actions a.external { border-bottom-style: solid; }
-
-/* Toggle area */
-.toggle-area {
-  display: none; position: relative;
-  border: 1px solid #000; border-radius: 10px;
-  padding: 12px 44px 12px 12px; background: #fafafa;
-  margin-top: 10px; overflow: auto;
-}
-.toggle-area .panel-label {
-  font-size: 0.82rem; color: #333; font-weight: 600;
-  text-transform: uppercase; letter-spacing: 0.03em;
-  opacity: 0.85; margin-bottom: 6px;
-}
-.toggle-area pre { white-space: pre-wrap; word-wrap: break-word; margin: 0; }
-.toggle-area .content p { margin: 0 0 0.6em 0; }
-
-/* Copy button */
-.copy-btn {
-  position: absolute; top: 6px; right: 6px;
-  border: 1px solid #ddd; background: #fff; font-size: 0.85rem;
-  padding: 4px 8px; border-radius: 6px; cursor: pointer;
-}
-.copy-btn:active { transform: translateY(1px); }
-.copy-toast {
-  position: absolute; top: 6px; right: 70px; font-size: 0.8rem;
-  background: #333; color: #fff; padding: 3px 7px; border-radius: 6px; display: none;
-}
-
-/* Lab-led star on Abstract link */
-.pub-actions .lab-star {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-  line-height: 1;
-  color: #ffb300;
-  user-select: none;
-}
-.pub-actions .lab-star[role="img"] {
-  cursor: default;
-}
-.pub-actions .lab-star .sr-only {
-  position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px; overflow: hidden;
-  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
-}
-</style>
-</div>
-<script>
-(function() {
-  function getCard(el) {
-    while (el && !el.classList?.contains('pub-card')) el = el.parentNode;
-    return el;
-  }
-  function showPanel(card, label, html, mode) {
-    const area = card.querySelector('.toggle-area');
-    const labelEl = area.querySelector('.panel-label');
-    const contentEl = area.querySelector('.content');
-
-    // Toggle: if clicking same action while open, collapse
-    const current = area.getAttribute('data-current');
-    if (current === mode && area.style.display === 'block') {
-      area.style.display = 'none';
-      area.setAttribute('data-current', '');
-      return;
-    }
-
-    labelEl.textContent = label;
-    if (mode === 'bib') {
-      contentEl.innerHTML = '';
-      const pre = document.createElement('pre');
-      pre.textContent = html;
-      contentEl.appendChild(pre);
-    } else if (mode === 'abstract') {
-      contentEl.textContent = html;
-    } else {
-      contentEl.innerHTML = html; // citation HTML
-    }
-    area.style.display = 'block';
-    area.setAttribute('data-current', mode);
-  }
-
-  // Resource link handler (toggle)
-  document.addEventListener('click', function(evt) {
-    const a = evt.target.closest('a[data-action]');
-    if (!a) return;
-    const action = a.getAttribute('data-action');
-    const card   = getCard(a);
-    if (!card) return;
-    evt.preventDefault();
-
-    if (action === 'abstract' || action === 'citation' || action === 'bib') {
-      const key = card.getAttribute('data-key');  // <-- Pandoc ref id suffix
-
-      // Build label + payload
-      let label = action === 'citation' ? 'Citation' : (action === 'bib' ? 'BibTeX' : 'Abstract');
-      let html  = '';
-
-      if (action === 'abstract') {
-        const payloadEl = card.querySelector('.payload-abstract');
-        const text = (payloadEl?.textContent || 'No abstract available.').trim();
-        showPanel(card, label, text, 'abstract');
-        return;
-      }
-
-      if (action === 'citation') {
-        // Pull APA-formatted HTML from hidden #refs list: <div id="ref-KEY">
-        const ref = document.querySelector('#ref-' + key);
-        html = (ref ? ref.innerHTML : 'Citation unavailable.').trim();
-        showPanel(card, label, html, 'citation');
-        return;
-      }
-
-      if (action === 'bib') {
-        const payloadEl = card.querySelector('.payload-bibtex');
-        const text = (payloadEl?.textContent || 'No BibTeX available.').trim();
-        showPanel(card, label, text, 'bib');
-        return;
-      }
-    }
-  }, false);
-
-  // Copy button
-  document.addEventListener('click', function(evt) {
-    const btn = evt.target.closest('.copy-btn');
-    if (!btn) return;
-    const card = getCard(btn);
-    const area = card.querySelector('.toggle-area');
-    const contentEl = area.querySelector('.content');
-
-    let textToCopy = '';
-    const pre = contentEl.querySelector('pre');
-    if (pre) textToCopy = pre.textContent;
-    else textToCopy = contentEl.innerText;
-
-    navigator.clipboard.writeText(textToCopy).then(() => {
-      const toast = area.querySelector('.copy-toast');
-      toast.style.display = 'inline-block';
-      setTimeout(() => { toast.style.display = 'none'; }, 1200);
-    }).catch(() => {
-      const ta = document.createElement('textarea');
-      ta.value = textToCopy;
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand('copy'); } catch (e) {}
-      document.body.removeChild(ta);
-    });
-  }, false);
-})();
-</script>
 <section id="peer-reviewed-publications" class="level2">
 <h2 class="anchored" data-anchor-id="peer-reviewed-publications">Peer-Reviewed Publications</h2>
 <div class="cell">
@@ -3412,12 +3234,39 @@ Emelko, Silins, Bladon &amp; Stone
 </div>
 </div>
 <div class="year-group">
-<h2 class="year-title anchored" id="y-2010">2010</h2>
-<div></div>
-</div>
-<div class="year-group">
 <h2 class="year-title anchored" id="y-2009">2009</h2>
 <div>
+<div class="pub-card" data-key="BoonComparisonsFieldTechniques2009">
+<div class="pub-title">Comparison of field techniques for measuring snow density at a point</div>
+<div class="pub-meta">
+Boon, Davis, Bladon &amp; Wagner
+<br>
+<em>Streamline</em>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+<a class="external" href="articles/BoonComparisonsFieldTechniques2009.pdf" target="_blank" rel="noopener">Article</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@article{BoonComparisonsFieldTechniques2009,
+  title = {Comparison of field techniques for measuring snow density at a point},
+  volume = {12},
+  number = {2},
+  journal = {Streamline},
+  author = {Sarah Boon and Reed Davis and Kevin D. Bladon and Michael Wagner},
+  year = {2009},
+  pages = {8--12}
+}</div>
+</div>
+</div>
 <div class="pub-card" data-key="silinsSedimentProductionFollowing2009">
 <div class="pub-title">
 <a href="https://doi.org/10.1016/j.catena.2009.04.001" target="_blank" rel="noopener">Sediment production following severe wildfire and post-fire salvage logging in the Rocky Mountain headwaters of the Oldman River Basin, Alberta</a>
@@ -3454,6 +3303,37 @@ Silins, Stone, Emelko &amp; Bladon
   year = {2009},
   pages = {189--197},
   note = {Last visited on 09/16/2026}
+}</div>
+</div>
+</div>
+<div class="pub-card" data-key="BladonWildfireWatershedHydrology2009">
+<div class="pub-title">Wildfire and watershed hydrology: Key findings from a workshop</div>
+<div class="pub-meta">
+Bladon &amp; Redding
+<br>
+<em>Streamline</em>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+<a class="external" href="articles/BladonWildfireWatershedHydrology2009.pdf" target="_blank" rel="noopener">Article</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@article{BladonWildfireWatershedHydrology2009,
+  title = {Wildfire and watershed hydrology: {Key} findings from a workshop},
+  volume = {13},
+  number = {1},
+  journal = {Streamline},
+  author = {Kevin D. Bladon and Todd Redding},
+  year = {2009},
+  pages = {1--4}
 }</div>
 </div>
 </div>
@@ -3535,6 +3415,36 @@ Silins, Stone, Emelko &amp; Bladon
   author = {U. Silins and M. Stone and M. Emelko and K. Bladon},
   year = {2008},
   note = {Last visited on 09/16/2026}
+}</div>
+</div>
+</div>
+<div class="pub-card" data-key="BladonLinkingSilviculture2008">
+<div class="pub-title">Linking silviculture to watershed management</div>
+<div class="pub-meta">
+Bladon &amp; Silins
+<br>
+<em>Canadian Silviculture</em>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+<a class="external" href="articles/BladonLinkingSilviculture2008.pdf" target="_blank" rel="noopener">Article</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@article{BladonLinkingSilviculture2008,
+  title = {Linking silviculture to watershed management},
+  journal = {Canadian Silviculture},
+  author = {Kevin D. Bladon and Uldis Silins},
+  month = {aug},
+  year = {2008},
+  pages = {6--10}
 }</div>
 </div>
 </div>
@@ -3730,7 +3640,7 @@ Watts, Wondzell, Jarecke &amp; Bladon
 <div>
 <div class="pub-card" data-key="RobinneWildfiresCodeRed">
 <div class="pub-title">
-<a href="https://www.watercanada.net/wp-content/uploads/2021/11/WC121_NovDec021_DIGITAL.pdf" target="_blank" rel="noopener">Wildfires in our watersheds: "Code red" for source water supply</a>
+<a href="https://www.watercanada.net/wp-content/uploads/2021/11/WC121_NovDec021_DIGITAL.pdf" target="_blank" rel="noopener">Wildfires in our watersheds: "Code red" for source water supply2021</a>
 </div>
 <div class="pub-meta">
 Robinne &amp; Bladon
@@ -3755,7 +3665,7 @@ Robinne &amp; Bladon
 <div style="display:none;">
 <div class="payload-abstract">NA</div>
 <div class="payload-bibtex">@article{RobinneWildfiresCodeRed,
-  title = {Wildfires in our watersheds: "{Code} red" for source water supply},
+  title = {Wildfires in our watersheds: "{Code} red" for source water supply2021},
   url = {https://www.watercanada.net/wp-content/uploads/2021/11/WC121_NovDec021_DIGITAL.pdf},
   number = {November/December 2021},
   journal = {Water Canada},
@@ -3770,10 +3680,8 @@ Robinne &amp; Bladon
 <div class="year-group">
 <h2 class="year-title anchored" id="y-2012">2012</h2>
 <div>
-<div class="pub-card" data-key="WiensczykClimateChangesDisturbance">
-<div class="pub-title">
-<a href="" target="_blank" rel="noopener">Climate-induced changes to natural disturbance regimes and management responses in British Columbia: Impacts on natural and human systems</a>
-</div>
+<div class="pub-card" data-key="WiensczykClimateChangesDisturbance2012">
+<div class="pub-title">Climate-induced changes to natural disturbance regimes and management responses in British Columbia: Impacts on natural and human systems</div>
 <div class="pub-meta">
 Wiensczyk, Gayton, Redding, Bladon, Leach, Swift, Ran, Krishnaswamy, Simmons, Joseph, Almuedo &amp; Cuzner
 <br>
@@ -3782,7 +3690,6 @@ Wiensczyk, Gayton, Redding, Bladon, Leach, Swift, Ran, Krishnaswamy, Simmons, Jo
 <div class="pub-actions">
 <a href="#" data-action="citation" role="button">Citation</a>
 <a href="#" data-action="bib" role="button">BibTeX</a>
-<a class="external" href="articles/WiensczykClimateChangesDisturbance.pdf" target="_blank" rel="noopener">Article</a>
 </div>
 <div class="toggle-area" data-current="">
 <button class="copy-btn">Copy</button>
@@ -3792,7 +3699,7 @@ Wiensczyk, Gayton, Redding, Bladon, Leach, Swift, Ran, Krishnaswamy, Simmons, Jo
 </div>
 <div style="display:none;">
 <div class="payload-abstract">NA</div>
-<div class="payload-bibtex">@article{WiensczykClimateChangesDisturbance,
+<div class="payload-bibtex">@article{WiensczykClimateChangesDisturbance2012,
   address = {Kamloops, B.C.},
   title = {Climate-induced changes to natural disturbance regimes and management responses in {British} {Columbia}: {Impacts} on natural and human systems},
   volume = {27},
@@ -3838,8 +3745,377 @@ Pike, Redding, Moore, Winkler &amp; Bladon
   number = {66},
   publisher = {Ministry of Forests and Range},
   editor = {Robin G. Pike and T. E. Redding and R. D. Moore and R. D. Winkler and Kevin D. Bladon},
-  year = {2010},
-  annote = {2010"--Cover}
+  year = {2010}
+}</div>
+</div>
+</div>
+</div>
+</div>
+<div class="year-group">
+<h2 class="year-title anchored" id="y-2009">2009</h2>
+<div>
+<div class="pub-card" data-key="ReddingMountainPineBeetle2009">
+<div class="pub-title">Mountain pine beetle and watershed management</div>
+<div class="pub-meta">
+Redding &amp; Bladon
+<br>
+<em>Streamline</em>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+<a class="external" href="articles/ReddingMountainPineBeetle2009.pdf" target="_blank" rel="noopener">Article</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@article{ReddingMountainPineBeetle2009,
+  title = {Mountain pine beetle and watershed management},
+  volume = {13},
+  number = {1},
+  journal = {Streamline},
+  author = {Todd Redding and Kevin D. Bladon},
+  year = {2009},
+  pages = {29--31}
+}</div>
+</div>
+</div>
+<div class="pub-card" data-key="BladonOneWatershed2009">
+<div class="pub-title">One Watershed – One Water Conference Summary</div>
+<div class="pub-meta">
+Bladon
+<br>
+<em>LINK</em>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@article{BladonOneWatershed2009,
+  title = {One {Watershed} – {One} {Water} {Conference} {Summary}},
+  volume = {4},
+  journal = {LINK},
+  author = {Kevin D. Bladon},
+  year = {2009},
+  pages = {1--4}
+}</div>
+</div>
+</div>
+<div class="pub-card" data-key="SilinsSouthernRockiesWatershed2009">
+<div class="pub-title">Southern Rockies Watershed Project: How wildfire and salvage logging affect water quality and aquatic ecology</div>
+<div class="pub-meta">
+Silins, Bladon, Anderson, Diiwu, Emelko, Stone &amp; Boon
+<br>
+<em>Streamline</em>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+<a class="external" href="articles/SilinsSouthernRockiesWatershed2009.pdf" target="_blank" rel="noopener">Article</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@article{SilinsSouthernRockiesWatershed2009,
+  title = {Southern {Rockies} {Watershed} {Project}: {How} wildfire and salvage logging affect water quality and aquatic ecology},
+  volume = {12},
+  number = {2},
+  journal = {Streamline},
+  author = {Uldis Silins and Kevin D. Bladon and Axel Anderson and John Diiwu and Monica B. Emelko and Micheal Stone and Sarah Boon},
+  year = {2009},
+  pages = {1--7}
+}</div>
+</div>
+</div>
+<div class="pub-card" data-key="SilinsSouthernRockiesWatershed2009b">
+<div class="pub-title">Southern Rockies Watershed Project: Impact of natural disturbance by wildfire on hydrology, water quality, and aquatic ecology</div>
+<div class="pub-meta">
+Silins, Bladon, Stone, Emelko &amp; Boon
+<br>
+<em>Phase I Final Report (2004-2008)</em>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@techreport{SilinsSouthernRockiesWatershed2009b,
+  address = {Edmonton, AB},
+  title = {Southern {Rockies} {Watershed} {Project}: {Impact} of natural disturbance by wildfire on hydrology, water quality, and aquatic ecology},
+  number = {Phase I Final Report (2004-2008)},
+  institution = {Alberta Sustainable Resource Development},
+  author = {Uldis Silins and Kevin D. Bladon and Micheal Stone and Monica B. Emelko and Sarah Boon},
+  year = {2009},
+  pages = {89}
+}</div>
+</div>
+</div>
+</div>
+</div>
+<div class="year-group">
+<h2 class="year-title anchored" id="y-2008">2008</h2>
+<div>
+<div class="pub-card" data-key="BladonHydrologicConcernsCold2008">
+<div class="pub-title">Chapter 12: Hydrologic concerns of cold climate harvesting</div>
+<div class="pub-meta">
+Bladon, Rothwell &amp; Spillios
+<br>
+<em>Handbook of Control and Mitigation Measures for Silvicultural Operations</em>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@incollection{BladonHydrologicConcernsCold2008,
+  address = {Montreal, QC},
+  title = {Chapter 12: {Hydrologic} concerns of cold climate harvesting},
+  booktitle = {Handbook of {Control} and {Mitigation} {Measures} for {Silvicultural} {Operations}},
+  publisher = {National Council for Air and Stream Improvement, Inc. (NCASI)},
+  author = {Kevin D Bladon and R. Rothwell and L. Spillios},
+  year = {2008}
+}</div>
+</div>
+</div>
+<div class="pub-card" data-key="bladonChapter9ControlMitigationMeasures2008">
+<div class="pub-title">Chapter 9: Control and mitigation measures for fire: Hydrologic considerations</div>
+<div class="pub-meta">
+Bladon, Rothwell &amp; Spillios
+<br>
+<em>Handbook of Control and Mitigation Measures for Silvicultural Operations</em>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@incollection{bladonChapter9ControlMitigationMeasures2008,
+  address = {Montreal, QC},
+  title = {Chapter 9: {Control} and mitigation measures for fire: {Hydrologic} considerations},
+  booktitle = {Handbook of {Control} and {Mitigation} {Measures} for {Silvicultural} {Operations}},
+  publisher = {National Council for Air and Stream Improvement, Inc. (NCASI)},
+  author = {Kevin D Bladon and R. Rothwell and L. Spillios},
+  year = {2008}
+}</div>
+</div>
+</div>
+<div class="pub-card" data-key="EmelkoDrinkingWaterTreatability2008">
+<div class="pub-title">Drinking water treatability implications of severe wildfire</div>
+<div class="pub-meta">
+Emelko, Silins, Bladon &amp; Stone
+<br>
+<em>In Proceedings of the AWWA Water Quality Technology Conference</em>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@inproceedings{EmelkoDrinkingWaterTreatability2008,
+  title = {Drinking water treatability implications of severe wildfire},
+  booktitle = {In {Proceedings} of the {AWWA} {Water} {Quality} {Technology} {Conference}},
+  author = {Monica B. Emelko and Uldis Silins and Kevin D. Bladon and Micheal Stone},
+  year = {2008}
+}</div>
+</div>
+</div>
+<div class="pub-card" data-key="BladonLessonsLearnedObservations2008">
+<div class="pub-title">Lessons learned from observations of mortality of residual trees following variable retention in west-central Alberta. In Overcoming Obstacles to Variable Retention in Forest Management: Science to Management Forum Proceedings, September 25–27, 2007</div>
+<div class="pub-meta">
+Bladon, Silins, Lieffers &amp; Landhausser
+<br>
+<em>BC Journal of Ecosystems and Management</em>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@article{BladonLessonsLearnedObservations2008,
+  title = {Lessons learned from observations of mortality of residual trees following variable retention in west-central {Alberta}. {In} {Overcoming} {Obstacles} to {Variable} {Retention} in {Forest} {Management}: {Science} to {Management} {Forum} {Proceedings}, {September} 25–27, 2007},
+  volume = {8},
+  number = {3},
+  journal = {BC Journal of Ecosystems and Management},
+  author = {Kevin D. Bladon and Uldis Silins and Victor J. Lieffers and S. M. Landhausser},
+  year = {2008},
+  pages = {73--76}
+}</div>
+</div>
+</div>
+<div class="pub-card" data-key="BladonStructureTreesVariable2008">
+<div class="pub-title">What happens to structure trees that are left in variable retention cutovers?</div>
+<div class="pub-meta">
+Bladon &amp; Lieffers
+<br>
+<em>Research Note No. 8</em>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@techreport{BladonStructureTreesVariable2008,
+  title = {What happens to structure trees that are left in variable retention cutovers?},
+  number = {Research Note No. 8},
+  institution = {Sustainable Forest Management Network},
+  author = {Kevin D. Bladon and Victor J. Lieffers},
+  year = {2008}
+}</div>
+</div>
+</div>
+</div>
+</div>
+<div class="year-group">
+<h2 class="year-title anchored" id="y-2006">2006</h2>
+<div>
+<div class="pub-card" data-key="BladonResidualTreesUnder2006">
+<div class="pub-title">Residual trees are under water stress in variable retention stands. Centre for Enhanced Forest Management</div>
+<div class="pub-meta">
+Bladon, Lieffers, Silins &amp; Landhäusser
+<br>
+<em>Advances in Forestry Research</em>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@article{BladonResidualTreesUnder2006,
+  title = {Residual trees are under water stress in variable retention stands. {Centre} for {Enhanced} {Forest} {Management}},
+  journal = {Advances in Forestry Research},
+  author = {Kevin D. Bladon and Victor J. Lieffers and Uldis Silins and Simon M Landh{\"a}usser},
+  month = {aug},
+  year = {2006}
+}</div>
+</div>
+</div>
+<div class="pub-card" data-key="BladonStressMortality2006">
+<div class="pub-title">Stress and mortality of four boreal tree species following variable retention harvesting</div>
+<div class="pub-meta">
+Bladon
+<br>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@phdthesis{BladonStressMortality2006,
+  address = {Edmonton, AB},
+  type = {Ph.{D}.},
+  title = {Stress and mortality of four boreal tree species following variable retention harvesting},
+  school = {University of Alberta},
+  author = {Kevin D. Bladon},
+  year = {2006}
+}</div>
+</div>
+</div>
+</div>
+</div>
+<div class="year-group">
+<h2 class="year-title anchored" id="y-2004">2004</h2>
+<div>
+<div class="pub-card" data-key="BladonBrownTrees2004">
+<div class="pub-title">Brown trees in green-tree retention</div>
+<div class="pub-meta">
+Bladon
+<br>
+<em>Environmental Research News in Alberta</em>
+</div>
+<div class="pub-actions">
+<a href="#" data-action="citation" role="button">Citation</a>
+<a href="#" data-action="bib" role="button">BibTeX</a>
+</div>
+<div class="toggle-area" data-current="">
+<button class="copy-btn">Copy</button>
+<span class="copy-toast">Copied!</span>
+<div class="panel-label">—</div>
+<div class="content"></div>
+</div>
+<div style="display:none;">
+<div class="payload-abstract">NA</div>
+<div class="payload-bibtex">@article{BladonBrownTrees2004,
+  title = {Brown trees in green-tree retention},
+  volume = {5},
+  number = {1},
+  journal = {Environmental Research News in Alberta},
+  author = {Kevin D. Bladon},
+  year = {2004},
+  pages = {7--8}
 }</div>
 </div>
 </div>
@@ -3869,6 +4145,15 @@ Bateman, D. S., Chelgren, N. D., Gresswell, R. E., Dunham, J. B., Hockman-Wert, 
 <div id="ref-beyeneBurnNotBurn2023" class="csl-entry" role="listitem">
 Beyene, M. T., Leibowitz, S. G., Dunn, C. J., &amp; Bladon, K. D. (2023). To burn or not to burn: <span>An</span> empirical assessment of the impacts of wildfires and prescribed fires on trace element concentrations in <span>Western</span> <span>US</span> streams. <em>Science of The Total Environment</em>, <em>863</em>, 160731. <a href="https://doi.org/10.1016/j.scitotenv.2022.160731">https://doi.org/10.1016/j.scitotenv.2022.160731</a>
 </div>
+<div id="ref-BladonBrownTrees2004" class="csl-entry" role="listitem">
+Bladon, K. D. (2004). Brown trees in green-tree retention. <em>Environmental Research News in Alberta</em>, <em>5</em>(1), 7–8.
+</div>
+<div id="ref-BladonStressMortality2006" class="csl-entry" role="listitem">
+Bladon, K. D. (2006). <em>Stress and mortality of four boreal tree species following variable retention harvesting</em> [Ph.{D}.]. University of Alberta.
+</div>
+<div id="ref-BladonOneWatershed2009" class="csl-entry" role="listitem">
+Bladon, K. D. (2009). One <span>Watershed</span> – <span>One</span> <span>Water</span> <span>Conference</span> <span>Summary</span>. <em>LINK</em>, <em>4</em>, 1–4.
+</div>
 <div id="ref-bladonRethinkingWildfiresForest2018" class="csl-entry" role="listitem">
 Bladon, K. D. (2018). Rethinking wildfires and forest watersheds. <em>Science</em>, <em>359</em>(6379), 1001–1002. <a href="https://doi.org/10.1126/science.aar8120">https://doi.org/10.1126/science.aar8120</a>
 </div>
@@ -3881,11 +4166,29 @@ Bladon, K. D., Cook, N. A., Light, J. T., &amp; Segura, C. (2016). A catchment-s
 <div id="ref-bladonWildfireFutureWater2014" class="csl-entry" role="listitem">
 Bladon, K. D., Emelko, M. B., Silins, U., &amp; Stone, M. (2014). Wildfire and the future of water supply. <em>Environmental Science &amp; Technology</em>, <em>48</em>(16), 8936–8943. <a href="https://doi.org/10.1021/es500130g">https://doi.org/10.1021/es500130g</a>
 </div>
+<div id="ref-BladonStructureTreesVariable2008" class="csl-entry" role="listitem">
+Bladon, K. D., &amp; Lieffers, V. J. (2008). <em>What happens to structure trees that are left in variable retention cutovers?</em> (Nos. Research Note No. 8). Sustainable Forest Management Network.
+</div>
+<div id="ref-BladonResidualTreesUnder2006" class="csl-entry" role="listitem">
+Bladon, K. D., Lieffers, V. J., Silins, U., &amp; Landhäusser, S. M. (2006). Residual trees are under water stress in variable retention stands. <span>Centre</span> for <span>Enhanced</span> <span>Forest</span> <span>Management</span>. <em>Advances in Forestry Research</em>.
+</div>
 <div id="ref-bladonElevatedMortalityResidual2008" class="csl-entry" role="listitem">
 Bladon, K. D., Lieffers, V. J., Silins, U., Landhäusser, S. M., &amp; Blenis, P. V. (2008). Elevated mortality of residual trees following structural retention harvesting in boreal mixedwoods. <em>The Forestry Chronicle</em>, <em>84</em>(1), 70–75. <a href="https://doi.org/10.5558/tfc84070-1">https://doi.org/10.5558/tfc84070-1</a>
 </div>
+<div id="ref-BladonWildfireWatershedHydrology2009" class="csl-entry" role="listitem">
+Bladon, K. D., &amp; Redding, T. (2009). Wildfire and watershed hydrology: <span>Key</span> findings from a workshop. <em>Streamline</em>, <em>13</em>(1), 1–4.
+</div>
+<div id="ref-BladonHydrologicConcernsCold2008" class="csl-entry" role="listitem">
+Bladon, K. D., Rothwell, R., &amp; Spillios, L. (2008a). Chapter 12: <span>Hydrologic</span> concerns of cold climate harvesting. In <em>Handbook of <span>Control</span> and <span>Mitigation</span> <span>Measures</span> for <span>Silvicultural</span> <span>Operations</span></em>. National Council for Air; Stream Improvement, Inc. (NCASI).
+</div>
+<div id="ref-bladonChapter9ControlMitigationMeasures2008" class="csl-entry" role="listitem">
+Bladon, K. D., Rothwell, R., &amp; Spillios, L. (2008b). Chapter 9: <span>Control</span> and mitigation measures for fire: <span>Hydrologic</span> considerations. In <em>Handbook of <span>Control</span> and <span>Mitigation</span> <span>Measures</span> for <span>Silvicultural</span> <span>Operations</span></em>. National Council for Air; Stream Improvement, Inc. (NCASI).
+</div>
 <div id="ref-bladonMulticatchmentAnalysisHeadwater2018" class="csl-entry" role="listitem">
 Bladon, K. D., Segura, C., Cook, N. A., Bywater-Reyes, S., &amp; Reiter, M. (2018). A multicatchment analysis of headwater and downstream temperature effects from contemporary forest harvesting. <em>Hydrological Processes</em>, <em>32</em>(2), 293–304. <a href="https://doi.org/10.1002/hyp.11415">https://doi.org/10.1002/hyp.11415</a>
+</div>
+<div id="ref-BladonLinkingSilviculture2008" class="csl-entry" role="listitem">
+Bladon, K. D., &amp; Silins, U. (2008). Linking silviculture to watershed management. <em>Canadian Silviculture</em>, 6–10.
 </div>
 <div id="ref-bladonCarbonIsotopeDiscrimination2007" class="csl-entry" role="listitem">
 Bladon, K. D., Silins, U., Landhausser, S. M., Messier, C., &amp; Lieffers, V. J. (2007). Carbon isotope discrimination and water stress in trembling aspen following variable retention harvesting. <em>Tree Physiology</em>, <em>27</em>(7), 1065–1071. <a href="https://doi.org/10.1093/treephys/27.7.1065">https://doi.org/10.1093/treephys/27.7.1065</a>
@@ -3893,11 +4196,17 @@ Bladon, K. D., Silins, U., Landhausser, S. M., Messier, C., &amp; Lieffers, V. J
 <div id="ref-bladonDifferentialTranspirationThree2006" class="csl-entry" role="listitem">
 Bladon, K. D., Silins, U., Landhäusser, S. M., &amp; Lieffers, V. J. (2006). Differential transpiration by three boreal tree species in response to increased evaporative demand after variable retention harvesting. <em>Agricultural and Forest Meteorology</em>, <em>138</em>(1), 104–119. <a href="https://doi.org/10.1016/j.agrformet.2006.03.015">https://doi.org/10.1016/j.agrformet.2006.03.015</a>
 </div>
+<div id="ref-BladonLessonsLearnedObservations2008" class="csl-entry" role="listitem">
+Bladon, K. D., Silins, U., Lieffers, V. J., &amp; Landhausser, S. M. (2008). Lessons learned from observations of mortality of residual trees following variable retention in west-central <span>Alberta</span>. <span>In</span> <span>Overcoming</span> <span>Obstacles</span> to <span>Variable</span> <span>Retention</span> in <span>Forest</span> <span>Management</span>: <span>Science</span> to <span>Management</span> <span>Forum</span> <span>Proceedings</span>, <span>September</span> 25–27, 2007. <em>BC Journal of Ecosystems and Management</em>, <em>8</em>(3), 73–76.
+</div>
 <div id="ref-bladonWildfireImpactsNitrogen2008" class="csl-entry" role="listitem">
 Bladon, K. D., Silins, U., Wagner, M. J., Stone, M., Emelko, M. B., Mendoza, C. A., Devito, K. J., &amp; Boon, S. (2008). Wildfire impacts on nitrogen concentration and production from headwater streams in southern <span>Alberta</span>’s <span>Rocky</span> <span>Mountains</span>. <em>Canadian Journal of Forest Research</em>, <em>38</em>(9), 2359–2371. <a href="https://doi.org/10.1139/X08-071">https://doi.org/10.1139/X08-071</a>
 </div>
 <div id="ref-BogaartWildfireNitrogenDynamics" class="csl-entry" role="listitem">
 Bogaart, M., Basso, M., McCredie, K. E., Murshed, H., Nunes, J. P., &amp; Bladon, K. D. (2026). Wildfire altered storm-event dynamics of dissolved nitrogen from headwater streams in the <span>Western</span> <span>Cascades</span>, <span>Oregon</span>. <em>Water Resources Research</em>.
+</div>
+<div id="ref-BoonComparisonsFieldTechniques2009" class="csl-entry" role="listitem">
+Boon, S., Davis, R., Bladon, K. D., &amp; Wagner, M. (2009). Comparison of field techniques for measuring snow density at a point. <em>Streamline</em>, <em>12</em>(2), 8–12.
 </div>
 <div id="ref-bothwellIronNotResponsible2012" class="csl-entry" role="listitem">
 Bothwell, M. L., Kilroy, C., Taylor, B. W., Ellison, E. T., James, D. A., Gillis, C.-A., Bladon, K. D., &amp; Silins, U. (2012). Iron is not responsible for <span>Didymosphenia</span> geminata bloom formation in phosphorus-poor rivers. <em>Canadian Journal of Fisheries and Aquatic Sciences</em>, <em>69</em>(11), 1723–1727. <a href="https://doi.org/10.1139/f2012-112">https://doi.org/10.1139/f2012-112</a>
@@ -3925,6 +4234,9 @@ Dymond, S. F., Wagenbrenner, J. W., Keppeler, E. T., &amp; Bladon, K. D. (2021).
 </div>
 <div id="ref-ebelHydrologicRecoveryWildfire2022" class="csl-entry" role="listitem">
 Ebel, B. A., Wagenbrenner, J. W., Kinoshita, A. M., &amp; Bladon, K. D. (2022). Hydrologic recovery after wildfire: <span>A</span> framework of approaches, metrics, criteria, trajectories, and timescales. <em>Journal of Hydrology and Hydromechanics</em>, <em>70</em>(4), 388–400. <a href="https://doi.org/10.2478/johh-2022-0033">https://doi.org/10.2478/johh-2022-0033</a>
+</div>
+<div id="ref-EmelkoDrinkingWaterTreatability2008" class="csl-entry" role="listitem">
+Emelko, M. B., Silins, U., Bladon, K. D., &amp; Stone, M. (2008). Drinking water treatability implications of severe wildfire. <em>In <span>Proceedings</span> of the <span>AWWA</span> <span>Water</span> <span>Quality</span> <span>Technology</span> <span>Conference</span></em>.
 </div>
 <div id="ref-emelkoImplicationsLandDisturbance2011" class="csl-entry" role="listitem">
 Emelko, M. B., Silins, U., Bladon, K. D., &amp; Stone, M. (2011). Implications of land disturbance on drinking water treatability in a changing climate: <span>Demonstrating</span> the need for <span>“source water supply and protection”</span> strategies. <em>Water Research</em>, <em>45</em>(2), 461–472. <a href="https://doi.org/10.1016/j.watres.2010.08.051">https://doi.org/10.1016/j.watres.2010.08.051</a>
@@ -4019,6 +4331,9 @@ Puntenney-Desmond, K. C., Bladon, K. D., &amp; Silins, U. (2020). Runoff and sed
 <div id="ref-rachelsQuantifyingEffectsForest2020" class="csl-entry" role="listitem">
 Rachels, A. A., Bladon, K. D., Bywater-Reyes, S., &amp; Hatten, J. A. (2020). Quantifying effects of forest harvesting on sources of suspended sediment to an <span>Oregon</span> <span>Coast</span> <span>Range</span> headwater stream. <em>Forest Ecology and Management</em>, <em>466</em>, 118123. <a href="https://doi.org/10.1016/j.foreco.2020.118123">https://doi.org/10.1016/j.foreco.2020.118123</a>
 </div>
+<div id="ref-ReddingMountainPineBeetle2009" class="csl-entry" role="listitem">
+Redding, T., &amp; Bladon, K. D. (2009). Mountain pine beetle and watershed management. <em>Streamline</em>, <em>13</em>(1), 29–31.
+</div>
 <div id="ref-richardsonFiftyeightYearsCounting2021" class="csl-entry" role="listitem">
 Richardson, P. W., Seehafer, J. E., Keppeler, E. T., Sutherland, D. G., Wagenbrenner, J. W., Bladon, K. D., Dymond, S. F., &amp; Cole, R. P. (2021). Fifty-eight years and counting of watershed science at the <span>Caspar</span> <span>Creek</span> <span>Experimental</span> <span>Watersheds</span> in northern <span>California</span>. <em>Hydrological Processes</em>, <em>35</em>(6), e14207. <a href="https://doi.org/10.1002/hyp.14207">https://doi.org/10.1002/hyp.14207</a>
 </div>
@@ -4026,7 +4341,7 @@ Richardson, P. W., Seehafer, J. E., Keppeler, E. T., Sutherland, D. G., Wagenbre
 Rind, M. A., Adam, J., Liu, M., Boll, J., Kampf, S., Bladon, K. D., Hanan, E. J., Adams, H., Padowski, J., &amp; Stevens-Rumann, C. (2026). Post-fire water yield recovery in snow-donminated mountain watersheds: <span>A</span> review of ecohydrologic pathways during vegetation recovery. <em>Journal of Hydrology</em>.
 </div>
 <div id="ref-RobinneWildfiresCodeRed" class="csl-entry" role="listitem">
-Robinne, F.-N., &amp; Bladon, K. D. (2021). Wildfires in our watersheds: "<span>Code</span> red" for source water supply. <em>Water Canada</em>, <em>November/December 2021</em>, 26–27. <a href="https://www.watercanada.net/wp-content/uploads/2021/11/WC121_NovDec021_DIGITAL.pdf">https://www.watercanada.net/wp-content/uploads/2021/11/WC121_NovDec021_DIGITAL.pdf</a>
+Robinne, F.-N., &amp; Bladon, K. D. (2021). Wildfires in our watersheds: "<span>Code</span> red" for source water supply2021. <em>Water Canada</em>, <em>November/December 2021</em>, 26–27. <a href="https://www.watercanada.net/wp-content/uploads/2021/11/WC121_NovDec021_DIGITAL.pdf">https://www.watercanada.net/wp-content/uploads/2021/11/WC121_NovDec021_DIGITAL.pdf</a>
 </div>
 <div id="ref-robinneSpatialEvaluationGlobal2018" class="csl-entry" role="listitem">
 Robinne, F.-N., Bladon, K. D., Miller, C., Parisien, M.-A., Mathieu, J., &amp; Flannigan, M. D. (2018). A spatial evaluation of global wildfire-water risks to human and natural systems. <em>Science of The Total Environment</em>, <em>610-611</em>, 1193–1206. <a href="https://doi.org/10.1016/j.scitotenv.2017.08.112">https://doi.org/10.1016/j.scitotenv.2017.08.112</a>
@@ -4070,8 +4385,14 @@ Shuman, J. K., Balch, J. K., Barnes, R. T., Higuera, P. E., Roos, C. I., Schwilk
 <div id="ref-silinsSouthernRockiesWatershed2016" class="csl-entry" role="listitem">
 Silins, U., Anderson, A., Bladon, K. D., Emelko, M. B., Stone, M., Spencer, S. A., Williams, C. H. S., Wagner, M. J., Martens, A. M., &amp; Hawthorn, K. (2016). Southern <span>Rockies</span> <span>Watershed</span> <span>Project</span>. <em>Forestry Chronicle</em>, <em>92</em>(1), 39–42. <a href="https://doi.org/10.5558/tfc2016-012">https://doi.org/10.5558/tfc2016-012</a>
 </div>
+<div id="ref-SilinsSouthernRockiesWatershed2009" class="csl-entry" role="listitem">
+Silins, U., Bladon, K. D., Anderson, A., Diiwu, J., Emelko, M. B., Stone, M., &amp; Boon, S. (2009). Southern <span>Rockies</span> <span>Watershed</span> <span>Project</span>: <span>How</span> wildfire and salvage logging affect water quality and aquatic ecology. <em>Streamline</em>, <em>12</em>(2), 1–7.
+</div>
 <div id="ref-silinsFiveyearLegacyWildfire2014" class="csl-entry" role="listitem">
 Silins, U., Bladon, K. D., Kelly, E. N., Esch, E., Spence, J. R., Stone, M., Emelko, M. B., Boon, S., Wagner, M. J., Williams, C. H. S., &amp; Tichkowsky, I. (2014). Five-year legacy of wildfire and salvage logging impacts on nutrient runoff and aquatic plant, invertebrate, and fish productivity. <em>Ecohydrology</em>, <em>7</em>(6), 1508–1523. <a href="https://doi.org/10.1002/eco.1474">https://doi.org/10.1002/eco.1474</a>
+</div>
+<div id="ref-SilinsSouthernRockiesWatershed2009b" class="csl-entry" role="listitem">
+Silins, U., Bladon, K. D., Stone, M., Emelko, M. B., &amp; Boon, S. (2009). <em>Southern <span>Rockies</span> <span>Watershed</span> <span>Project</span>: <span>Impact</span> of natural disturbance by wildfire on hydrology, water quality, and aquatic ecology</em> (Nos. Phase I Final Report (2004-2008); p. 89). Alberta Sustainable Resource Development.
 </div>
 <div id="ref-silinsSedimentProductionFollowing2009" class="csl-entry" role="listitem">
 Silins, U., Stone, M., Emelko, M. B., &amp; Bladon, K. D. (2009). Sediment production following severe wildfire and post-fire salvage logging in the <span>Rocky</span> <span>Mountain</span> headwaters of the <span>Oldman</span> <span>River</span> <span>Basin</span>, <span>Alberta</span>. <em>CATENA</em>, <em>79</em>(3), 189–197. <a href="https://doi.org/10.1016/j.catena.2009.04.001">https://doi.org/10.1016/j.catena.2009.04.001</a>
@@ -4112,7 +4433,7 @@ Warren, D. R., Roon, D. A., Swartz, A. G., &amp; Bladon, K. D. (2022). Loss of r
 <div id="ref-wattsHotAirDry2024" class="csl-entry" role="listitem">
 Watts, A., Wondzell, S., Jarecke, K., &amp; Bladon, K. (2024). Hot air or dry dirt: <span>Investigating</span> the greater drought risk to forests in the <span>Pacific</span> <span>Northwest</span>. <em>Science Findings 268. Portland, OR: U.S. Department of Agriculture, Forest Service, Pacific Northwest Research Station. 6 p.</em>, <em>268</em>. <a href="https://research.fs.usda.gov/treesearch/67961">https://research.fs.usda.gov/treesearch/67961</a>
 </div>
-<div id="ref-WiensczykClimateChangesDisturbance" class="csl-entry" role="listitem">
+<div id="ref-WiensczykClimateChangesDisturbance2012" class="csl-entry" role="listitem">
 Wiensczyk, A., Gayton, D., Redding, T., Bladon, K. D., Leach, J. A., Swift, K., Ran, S., Krishnaswamy, A., Simmons, E., Joseph, L., Almuedo, P. L., &amp; Cuzner, D. (2012). Climate-induced changes to natural disturbance regimes and management responses in <span>British</span> <span>Columbia</span>: <span>Impacts</span> on natural and human systems. <em>FORREX Forum for Research and Extension in Natural Resources</em>, <em>27</em>, 28.
 </div>
 <div id="ref-wilsonAssessingRoleSnow2021" class="csl-entry" role="listitem">
@@ -4173,13 +4494,14 @@ Wissler, A. D., Segura, C., &amp; Bladon, K. D. (2022). Comparing headwater stre
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -4194,7 +4516,7 @@ Wissler, A. D., Segura, C., &amp; Bladon, K. D. (2022). Comparing headwater stre
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/FEWS-lab\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
