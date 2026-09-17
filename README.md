@@ -6,7 +6,7 @@ The code and content for the Forest Ecohydrology and Watershed Science Lab websi
 
 Publications are added to the website via a shared Zotero [group](https://www.zotero.org/groups/6675700/fews-publications). To update the citations follow the directions below to correctly add a new publication:
 
-1.  **Ensure you have the required tools. You should only need to [do this once]{.underline}:**
+1.  **Ensure you have the required tools. You should only need to do this once:**
 
     -   Zotero installed on your computer
 
